@@ -1,1 +1,1 @@
-# mirror.js
+MIRROR BOT [JavaScript]
