@@ -56,7 +56,6 @@ client.on("message", async message => {
     if(command === "help") {
      const embed = new RichEmbed()  
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png?size=2048', 'https://discord.gg/Rnb9SSU')
-      .setTitle('')
       .setColor(0x8b00ff)
       .setDescription('**/avatar [пользователь] \n/say [сообщение] \n/kick [пользователь] [причина] \n/ban [пользователь] [причина] \n/clear [2/100] \n/ping \n/vk \n/telegram**');
     message.channel.send(embed);
