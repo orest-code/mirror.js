@@ -7,7 +7,7 @@ const newUsers = [];
 const ms = require("ms");
 
 
-client.login(process.env.TOKEN);
+client.login(process.env.MIRROR);
 
 
 client.on("ready", () => {
