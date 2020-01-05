@@ -25,7 +25,7 @@ client.on("ready", () => {
   client.user.setStatus("online");
   client.user.setPresence({
     game: {
-      name: "m!help",
+      name: "/help",
       type: "STREAMING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
