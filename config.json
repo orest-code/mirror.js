@@ -1,5 +1,5 @@
 {
-  "token": "NjEyMzIwMjk2MzU5Mjk3MDQ0.XhIGHA.lpABZQ9uwYnXdTXuWJkAy6gpbBE",
-  "prefix": "m!",
+  "token": "process.env.TOKEN",
+  "prefix": "m/",
   "ownerID" :  "595030276804050945" 
 }
