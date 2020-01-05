@@ -41,6 +41,11 @@ client.on('message', message => {
 });
 
 
+//welcome message
+client.on("guildMemberAdd", (guild, member) => {
+  guild.channels.get('638424590355267605').send("<@" + member.id + "> has joined the server!");
+});
+
 
 //commands
 client.on("message", async message => {
