@@ -1,5 +1,5 @@
 {
-  "token": "NjEyMzIwMjk2MzU5Mjk3MDQ0.XhH-9g.Dj4hBcsDLj-bu-qoTEgShVAfA-U",
+  "token": "process.env.PORT",
   "prefix": "m!",
   "ownerID" :  "595030276804050945" 
 }
