@@ -93,11 +93,11 @@ client.on("message", async message => {
   
   //social network
     if(command === vk) {
-    const exampleEmbed = new Discord.RichEmbed()
-	.setColor('#0099ff')
-	.setTitle('Группа ВКонтакте')
-	.setURL('https://vk.com/mirrords')
-	.setImage('https://cdn.discordapp.com/icons/521249346050850816/1aa2c052174d4f332855a9440c994bc2.png')
+     const embed = new Discord.RichEmbed()
+      .setColor('#0099ff')
+      .setTitle('Группа ВКонтакте')
+      .setURL('https://vk.com/mirrords')
+      .setImage('https://cdn.discordapp.com/icons/521249346050850816/1aa2c052174d4f332855a9440c994bc2.png')
     message.channel.send(exampleEmbed);
   }
     if(command === "telegram") {
