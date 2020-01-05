@@ -53,7 +53,7 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
   
   //help command
-    if(command ==="help") {
+    if(command === "help") {
           const embed = new RichEmbed() 
       .setTitle('Список комманд:')
       .setColor(0x8b00ff)
@@ -93,12 +93,12 @@ client.on("message", async message => {
   
   //social network
     if(command === "vk") {
-    const embed = new Discord.RichEmbed()
-	.setColor('#0099ff')
-	.setTitle('Группа ВКонтакте')
-	.setURL('https://discord.js.org/')
-	.setImage('https://i.imgur.com/wSTFkRM.png')
-    channel.send(embed);
+          const embed = new RichEmbed() 
+      .setTitle('Список комманд:')
+      .setColor(0x8b00ff)
+      .setURL('https://vk.com/mirrords')
+      .setDescription('**↑Жми↑**');
+    message.channel.send(embed);
   }
     if(command === "telegram") {
     message.channel.send('**Наша группа Телеграмм - https://t.me/mirrords**')
