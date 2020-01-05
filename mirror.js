@@ -93,8 +93,13 @@ client.on("message", async message => {
   
   
   //social network
-    if(command === "vk") {
-    message.channel.send('**Наша группа ВКонтакте - https://m.vk.com/mirrords**');
+    if(command === vk) {
+    const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#0099ff')
+	.setTitle('Группа ВКонтакте')
+	.setURL('https://vk.com/mirrords')
+	.setImage('https://cdn.discordapp.com/icons/521249346050850816/1aa2c052174d4f332855a9440c994bc2.png')
+    channel.send(exampleEmbed);
   }
     if(command === "telegram") {
     message.channel.send('**Наша группа Телеграмм - https://t.me/mirrords**')
