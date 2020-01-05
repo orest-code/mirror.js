@@ -37,7 +37,7 @@ client.on("ready", () => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-    message.channel.send('**Чтобы посмотреть список коммадн напишите  ``m!help``**');
+    message.channel.send('**Чтобы посмотреть список коммадн напишите  ``/help``**');
   }
 });
 
@@ -58,7 +58,7 @@ client.on("message", async message => {
           const embed = new RichEmbed() 
       .setTitle('Список комманд:')
       .setColor(0x8b00ff)
-      .setDescription('**m!avatar [пользователь] \nm!say [сообщение] \nm!kick [пользователь] [причина] \nm!ban [пользователь] [причина] \nm!clear [2/100] \nm!ping \nm!vk \nm!telegram**');
+      .setDescription('**/avatar [пользователь] \n/say [сообщение] \n/kick [пользователь] [причина] \n/ban [пользователь] [причина] \n/clear [2/100] \n/ping \n/vk \n/telegram**');
     message.channel.send(embed);
   }
   //say command
