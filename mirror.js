@@ -7,7 +7,7 @@ const newUsers = [];
 const ms = require("ms");
 
 
-client.login(config.token);
+client.login(process.env.TOKEN);
 
 
 client.on("ready", () => {
