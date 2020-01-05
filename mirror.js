@@ -41,13 +41,6 @@ client.on('message', message => {
 });
 
 
-//welcome message
-client.on("guildMemberAdd", member => {
-   const channel = member.guild.channels.find(c => c.name === "join-leave");
-   channel.send(`Everyone Welcome, ${member.user.username} to the server!`);
-})
-
-
 //commands
 client.on("message", async message => {
   
