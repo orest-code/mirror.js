@@ -1,1 +1,1 @@
-worker: node mirror.py
+worker: node mirror.js
