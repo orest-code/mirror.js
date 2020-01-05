@@ -54,7 +54,8 @@ client.on("message", async message => {
   
   //help command
     if(command === "help") {
-          const embed = new RichEmbed() 
+     const embed = new RichEmbed()  
+      .setImage('https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png?size=2048')
       .setTitle('Список комманд:')
       .setColor(0x8b00ff)
       .setDescription('**/avatar [пользователь] \n/say [сообщение] \n/kick [пользователь] [причина] \n/ban [пользователь] [причина] \n/clear [2/100] \n/ping \n/vk \n/telegram**');
@@ -100,7 +101,11 @@ client.on("message", async message => {
     message.channel.send(embed);
   }
     if(command === "telegram") {
-    message.channel.send('**Наша группа Телеграмм - https://t.me/mirrords**')
+          const embed = new RichEmbed() 
+      .setTitle('Группа Телеграмм')
+      .setColor(0x8b00ff)
+      .setURL('https://t.me/mirrords')
+    message.channel.send(embed);
   }
   
   
