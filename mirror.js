@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-
 const { Client, RichEmbed } = require('discord.js');
 const fs = require("fs");
 const newUsers = [];
@@ -99,7 +98,7 @@ client.on("message", async message => {
 	.setTitle('Группа ВКонтакте')
 	.setURL('https://vk.com/mirrords')
 	.setImage('https://cdn.discordapp.com/icons/521249346050850816/1aa2c052174d4f332855a9440c994bc2.png')
-    channel.send(exampleEmbed);
+    message.channel.send(exampleEmbed);
   }
     if(command === "telegram") {
     message.channel.send('**Наша группа Телеграмм - https://t.me/mirrords**')
