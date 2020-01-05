@@ -92,7 +92,7 @@ client.on("message", async message => {
   
   
   //social network
-    if(command === 'vk') {
+    if(command === "vk") {
     const embed = new Discord.RichEmbed()
 	.setColor('#0099ff')
 	.setTitle('Группа ВКонтакте')
