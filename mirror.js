@@ -94,10 +94,9 @@ client.on("message", async message => {
   //social network
     if(command === "vk") {
           const embed = new RichEmbed() 
-      .setTitle('Список комманд:')
+      .setTitle('Группа ВКонтакте')
       .setColor(0x8b00ff)
       .setURL('https://vk.com/mirrords')
-      .setDescription('**↑Жми↑**');
     message.channel.send(embed);
   }
     if(command === "telegram") {
