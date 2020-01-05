@@ -111,20 +111,20 @@ client.on("message", async message => {
   //kick command
     if(command === "kick") {
     if(!message.member.roles.some(r=>["∞", "Owner", "Co-Owner", "Administrator", "Manager", "Moderator", "Junior Moderator"].includes(r.name)) )
-      return message.channel.send("**Извините, у вас нет разрешения для использование этой комманды!**");
+      return message.channel.send("Извините, у вас нет разрешения для использование этой комманды!");
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
-      return message.channel.send("**Пожалуйста, укажите кого вы хотите кикнуть!**");
+      return message.channel.send("Пожалуйста, укажите кого вы хотите кикнуть!");
     if(!member.kickable) 
-      return message.channel.send("*"У вас недостаточно прав чтобы кикнуть этого пользователя!**");
+      return message.channel.send("У вас недостаточно прав чтобы кикнуть этого пользователя!");
     
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Причина не указана.";
     
     await member.kick(reason)
-      .catch(error => message.channel.send(`**Извините ${message.author} Я не могу кинуть из-за : ${error}**`));
-    message.channel.send(`**${member.user.tag} был кикнут ${message.author.tag} по причине: ${reason}**`);
+      .catch(error => message.channel.send(`Извините ${message.author} Я не могу кинуть из-за : ${error}`));
+    message.channel.send(`${member.user.tag} был кикнут ${message.author.tag} по причине: ${reason}`);
 
   }
   
@@ -132,20 +132,20 @@ client.on("message", async message => {
   //ban command
   if(command === "ban") {
     if(!message.member.roles.some(r=>["∞", "Owner", "Co-Owner" ,"Administrator", "Manager", "Moderator"].includes(r.name)) )
-      return message.channel.send("**Извините, у вас нет разрешения для использование этой комманды!**");
+      return message.channel.send("Извините, у вас нет разрешения для использование этой комманды!");
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.channel.send("**Пожалуйста, укажите кого вы хотите забанить!**");
+      return message.channel.send("Пожалуйста, укажите кого вы хотите забанить!");
     if(!member.bannable) 
-      return message.channel.send("**У вас недостаточно прав чтобы забанить этого пользователя!**");
+      return message.channel.send("У вас недостаточно прав чтобы забанить этого пользователя!");
 
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Причина не указана.";
     
     await member.ban(reason)
       .catch(error => message.channel.send(`Извините ${message.author} я не мог забанить из-за : ${error}`));
-    message.channel.send(`**${member.user.tag} был забанен пользователем ${message.author.tag} по причине: ${reason}**`);
+    message.channel.send(`${member.user.tag} был забанен пользователем ${message.author.tag} по причине: ${reason}`);
   }
   
   //clear command
@@ -154,10 +154,10 @@ client.on("message", async message => {
     const deleteCount = parseInt(args[0], 10);
     
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return message.channel.send("**Пожалуйста, укажите сколько сообщений вы хотите удалить!**");
+      return message.channel.send("Пожалуйста, укажите сколько сообщений вы хотите удалить!");
     
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
-      .catch(error => message.channel.send(`**Не удалось удалить сообщения из-за: ${error}**`));
+      .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`));
   }
 });
