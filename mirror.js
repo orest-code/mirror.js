@@ -42,9 +42,10 @@ client.on('message', message => {
 
 
 //welcome message
-client.on("guildMemberAdd", (guild, member) => {
-  guild.channels.get('638424590355267605').send("<@" + member.id + "> has joined the server!");
-});
+client.on("guildMemberAdd", member => {
+   const channel = member.guild.channels.find(c => c.name === "welcome");
+   channel.send(`Everyone Welcome, ${member.user.username} to the server!`);
+})
 
 
 //commands
