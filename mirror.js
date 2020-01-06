@@ -70,6 +70,17 @@ client.on("message", async message => {
   }
   
   
+  //serveravatar
+    if(command === "serveravatar") {
+       let guild = message.mentions.guild.first();
+    if(!guild) guild = message.author;
+    const embed = new Discord.RichEmbed()
+                   .setImage(guild.avatarURL)
+                   .setColor(0x8b00ff)
+    message.channel.send({embed});
+  }
+
+
   //avatar command
     if(command === "avatar") {
        let user = message.mentions.users.first();
