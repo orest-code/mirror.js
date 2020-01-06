@@ -79,15 +79,18 @@ client.on("message", async message => {
   }
 
   //serverinfo command
-    if(command === "server") {
+    if(command === "server") { 
+    let authoravatar = message.author.avatarURL;
     let sicon = message.guild.iconURL;
     let server = new Discord.RichEmbed()
+      .setAuthor(sicon)
       .setColor("#8b00ff")
-      .setThumbnail(`message.guild.avatarURL`)
+      .setThumbnail(sicon)
       .addField("Название сервера:", message.guild.name)
       .addField("Участников:", message.guild.memberCount)
       .addField("Владелец сервера:", message.guild.owner.user.tag) 
       .addField("Регион:", message.guild.region) 
+      .setFooter(authoravatar);
     return message.channel.send(server);
   }
 
