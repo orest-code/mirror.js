@@ -61,7 +61,13 @@ client.on("message", async message => {
   } 
 
   
-  //serverinfo
+  //random number command
+    if(command === "random") {
+    var random = Math.floor(Math.random() *100)+1;
+    message.channel.send(`${message.author.username}` + " rolled " + random + " out of 100");
+    }
+
+  //serverinfo command
     if(command === "serverinfo") { 
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
