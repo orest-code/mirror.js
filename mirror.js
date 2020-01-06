@@ -54,19 +54,20 @@ client.on("message", async message => {
   //help command
     if(command === "help") {
     let help = new Discord.RichEmbed()
-      .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png?size=2048', 'https://discord.gg/Rnb9SSU')
+      .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
+      .setDescription(' Список комманд:')
       .setColor("#8b00ff") 
-      .addField("━━━━➳༻❀✿❀༺➳━━━━", "↓")
-      .addField("Server info", "/server")
-      .addField("Avatar", "/avatar [member]")
-      .addField("Say", "/say [message]")
-      .addField("Kick", "/kick [member] [reason]")
-      .addField("Ban", "/ban [member] [reason]")
-      .addField("Random number", "/ramdom") 
-      .addField("Ping", "/ping")
-      .addField("VK", "/vk")
-      .addField("Telegram", "/telegram") 
-      .addField("━━━━➳༻❀✿❀༺➳━━━━", "↑")
+      .setThumbnail('https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png')
+      .addField("➣ Server info", "/server")
+      .addField("➣ Avatar", "/avatar [member]")
+      .addField("➣ Say", "/say [message]")
+      .addField("➣ Kick", "/kick [member] [reason]")
+      .addField("➣ Ban", "/ban [member] [reason]")
+      .addField("➣ Random number", "/ramdom") 
+      .addField("➣ Ping", "/ping")
+      .addField("➣ VK", "/vk")
+      .addField("➣ Telegram", "/telegram") 
+      .setFooter('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png');
     return message.channel.send(help);
   }
 
