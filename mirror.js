@@ -53,34 +53,41 @@ client.on("message", async message => {
   
   //help command
     if(command === "help") {
-     const embed = new RichEmbed()  
+    let help = new Discord.RichEmbed()
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png?size=2048', 'https://discord.gg/Rnb9SSU')
-      .setColor(0x8b00ff)
-      .setDescription('**/avatar [пользователь] \n/say [сообщение] \n/kick [пользователь] [причина] \n/ban [пользователь] [причина] \n/clear [2/100] \n/ping \n/vk \n/telegram**');
-    message.channel.send(embed);
-  } 
+      .setColor("#8b00ff")
+      .addField("/server")
+      .addField("/avatar")
+      .addField("/say")
+      .addField("/random")
+      .addField("/ping")
+      .addField("/kick")
+      .addField("/ban")
+      .addField("/vk")
+      .addField("/telegram")
+    return message.channel.send(help);
+  }
 
   
   //random number command
     if(command === "random") {
     var random = Math.floor(Math.random() *100)+1;
     message.channel.send(random);
-    }
+  }
 
   //serverinfo command
     if(command === "server") {
     let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
+    let server = new Discord.RichEmbed()
       .setTitle('Server')
-      .setColor("#009900")
+      .setColor("#8b00ff")
       .setThumbnail(sicon)
       .addField("Название сервера:", message.guild.name)
       .addField("Участников:", message.guild.memberCount)
       .addField("Владелец сервера:", message.guild.owner.user.tag) 
       .addField("Регион:", message.guild.region) 
-      .addField("Ролей:", message.guild.roles)
-        return message.channel.send(serverembed);
-    }
+    return message.channel.send(server);
+  }
 
 
   //say command
