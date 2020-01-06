@@ -78,7 +78,7 @@ client.on("message", async message => {
       .addField("Участников:", message.guild.memberCount)
       .addField("Владелец сервера:", message.guild.owner.user.tag) 
       .addField("Регион:", message.guild.region) 
-      .addField("Ролей:",
+      .addField("Ролей:", message.guild.roles)
         return message.channel.send(serverembed);
     }
 
