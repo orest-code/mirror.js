@@ -58,7 +58,9 @@ client.on("message", async message => {
       .setColor(0x8b00ff)
       .setDescription('**/avatar [пользователь] \n/say [сообщение] \n/kick [пользователь] [причина] \n/ban [пользователь] [причина] \n/clear [2/100] \n/ping \n/vk \n/telegram**');
     message.channel.send(embed);
-  }
+  } 
+
+
   //say command
     if(command === "say") {
     if(!message.member.roles.some(r=>["∞", "Owner"].includes(r.name)) )
@@ -67,17 +69,6 @@ client.on("message", async message => {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});  
     message.channel.send(sayMessage);
-  }
-  
-  
-  //serveravatar
-    if(command === "serveravatar") {
-       let guild = message.mentions.guild.first();
-    if(!guild) guild = message.author;
-    const embed = new Discord.RichEmbed()
-                   .setImage(guild.avatarURL)
-                   .setColor(0x8b00ff)
-    message.channel.send({embed});
   }
 
 
@@ -157,6 +148,7 @@ client.on("message", async message => {
     message.channel.send(`${member.user.tag} был забанен пользователем <@${message.author.id}> по причине: ${reason}`);
   }
   
+
   //clear command
     if(command === "clear") {
       
