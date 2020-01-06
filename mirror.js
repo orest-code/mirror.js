@@ -143,7 +143,7 @@ client.on("message", async message => {
     
     await member.ban(reason)
       .catch(error => message.channel.send(`Извините ${message.author} я не мог забанить из-за : ${error}`));
-    message.channel.send(`${member.user.tag} был забанен пользователем ${message.author.tag} по причине: ${reason}`);
+    message.channel.send(`${member.user.tag} был забанен пользователем <@${message.author.id}> по причине: ${reason}`);
   }
   
   //clear command
