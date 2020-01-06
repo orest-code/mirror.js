@@ -60,6 +60,21 @@ client.on("message", async message => {
     message.channel.send(embed);
   } 
 
+  
+  //serverinfo
+    if(command === "serverinfo") { 
+    let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+      .setDescription("Server Info")
+      .setColor("#009900")
+      .setThumbnail(sicon)
+      .addField("Server Name", message.guild.name)
+      .addField("Created On", message.guild.createdAt)
+      .addField("Total Members", message.guild.memberCount)
+      .addField("You Joined", message.member.joinedAt);
+    return message.channel.send(serverembed);
+  }
+
 
   //say command
     if(command === "say") {
