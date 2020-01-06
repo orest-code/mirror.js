@@ -56,7 +56,7 @@ client.on("message", async message => {
     let help = new Discord.RichEmbed()
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png?size=2048', 'https://discord.gg/Rnb9SSU')
       .setColor("#8b00ff") 
-      .addDescription("━━━━➳༻❀✿❀༺➳━━━━")
+      .addField("━━━━➳༻❀✿❀༺➳━━━━", "↓")
       .addField("⓵ Server info", "/server")
       .addField("⓶ Avatar", "/avatar [member]")
       .addField("⓷ Say", "/say [message]")
@@ -66,7 +66,7 @@ client.on("message", async message => {
       .addField("⓻ Ping", "/ping")
       .addField("⓼ VK", "/vk")
       .addField("⓽ Telegram", "/telegram") 
-      .addDescription("━━━━➳༻❀✿❀༺➳━━━━")
+      .addDescription("━━━━➳༻❀✿❀༺➳━━━━", "↑")
     return message.channel.send(help);
   }
 
