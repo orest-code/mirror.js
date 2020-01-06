@@ -71,7 +71,7 @@ client.on("message", async message => {
     if(command === "server") {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-      .setTitle(guild.iconURL)
+      .setTitle('Server')
       .setColor("#009900")
       .setThumbnail(sicon)
       .addField("Название сервера:", message.guild.name)
