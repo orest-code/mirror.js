@@ -61,7 +61,7 @@ client.on("message", async message => {
       .addField("Say", "/say [message]")
       .addField("Kick", "/kick [member] [reason]")
       .addField("Ban", "/ban [member] [reason]")
-      .addField("Random", "/ramdom") 
+      .addField("Random number", "/ramdom") 
       .addField("Ping", "/ping")
       .addField("VK", "/vk")
       .addField("Telegram", "/telegram")
