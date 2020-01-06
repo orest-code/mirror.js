@@ -123,7 +123,7 @@ client.on("message", async message => {
     
     await member.kick(reason)
       .catch(error => message.channel.send(`Извините ${message.author} Я не могу кинуть из-за : ${error}`));
-    message.channel.send(`${member.user.tag} был кикнут ${message.author.tag} по причине: ${reason}`);
+    message.channel.send(`${member.user.username} был кикнут ${message.author.username} по причине: ${reason}`);
 
   }
   
@@ -144,7 +144,7 @@ client.on("message", async message => {
     
     await member.ban(reason)
       .catch(error => message.channel.send(`Извините ${message.author} я не мог забанить из-за : ${error}`));
-    message.channel.send(`${member.user.tag} был забанен пользователем ${message.author.tag} по причине: ${reason}`);
+    message.channel.send(`${member.user.username} был забанен пользователем ${message.author.username} по причине: ${reason}`);
   }
   
   //clear command
