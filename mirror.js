@@ -64,7 +64,7 @@ client.on("message", async message => {
   //random number command
     if(command === "random") {
     var random = Math.floor(Math.random() *100)+1;
-    message.channel.send(`${message.author.username}` + " rolled " + random + " out of 100");
+    message.channel.send(`${message.author.username}`  + random% + " из 100%");
     }
 
   //serverinfo command
