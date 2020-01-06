@@ -56,15 +56,15 @@ client.on("message", async message => {
     let help = new Discord.RichEmbed()
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png?size=2048', 'https://discord.gg/Rnb9SSU')
       .setColor("#8b00ff")
-      .addField("/server")
-      .addField("/avatar")
-      .addField("/say")
-      .addField("/random")
-      .addField("/ping")
-      .addField("/kick")
-      .addField("/ban")
-      .addField("/vk")
-      .addField("/telegram")
+      .addField("Server info", "/server")
+      .addField("Avatar", "/avatar [member]")
+      .addField("Say", "/say [message]")
+      .addField("Kick", "/kick [member] [reason]")
+      .addField("Ban", "/ban [member] [reason]")
+      .addField("Random", "/ramdom") 
+      .addField("Ping", "/ping")
+      .addField("VK", "/vk")
+      .addField("Telegram", "/telegram")
     return message.channel.send(help);
   }
 
@@ -79,7 +79,7 @@ client.on("message", async message => {
     if(command === "server") {
     let sicon = message.guild.iconURL;
     let server = new Discord.RichEmbed()
-      .setTitle('Server')
+      .setTitle('Информация о сервере')
       .setColor("#8b00ff")
       .setThumbnail(sicon)
       .addField("Название сервера:", message.guild.name)
