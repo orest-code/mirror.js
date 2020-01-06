@@ -83,7 +83,7 @@ client.on("message", async message => {
     let sicon = message.guild.iconURL;
     let server = new Discord.RichEmbed()
       .setColor("#8b00ff")
-      .setThumbnail(`guild.iconURL`)
+      .setThumbnail(`message.guild.avatarURL`)
       .addField("Название сервера:", message.guild.name)
       .addField("Участников:", message.guild.memberCount)
       .addField("Владелец сервера:", message.guild.owner.user.tag) 
