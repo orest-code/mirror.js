@@ -64,7 +64,7 @@ client.on("message", async message => {
   //random number command
     if(command === "random") {
     var random = Math.floor(Math.random() *100)+1;
-    message.channel.send(**`${message.author.username}` + " Вы подходите друг другу на " + random + " из 100**");
+    message.channel.send("random");
     }
 
   //serverinfo command
