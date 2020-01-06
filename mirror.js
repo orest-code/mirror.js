@@ -55,16 +55,18 @@ client.on("message", async message => {
     if(command === "help") {
     let help = new Discord.RichEmbed()
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png?size=2048', 'https://discord.gg/Rnb9SSU')
-      .setColor("#8b00ff")
-      .addField("Server info", "/server")
-      .addField("Avatar", "/avatar [member]")
-      .addField("Say", "/say [message]")
-      .addField("Kick", "/kick [member] [reason]")
-      .addField("Ban", "/ban [member] [reason]")
-      .addField("Random number", "/ramdom") 
-      .addField("Ping", "/ping")
-      .addField("VK", "/vk")
-      .addField("Telegram", "/telegram")
+      .setColor("#8b00ff") 
+      .addDescription("━━━━➳༻❀✿❀༺➳━━━━")
+      .addField("⓵ Server info", "/server")
+      .addField("⓶ Avatar", "/avatar [member]")
+      .addField("⓷ Say", "/say [message]")
+      .addField("⓸ Kick", "/kick [member] [reason]")
+      .addField("⓹ Ban", "/ban [member] [reason]")
+      .addField("⓺ Random number", "/ramdom") 
+      .addField("⓻ Ping", "/ping")
+      .addField("⓼ VK", "/vk")
+      .addField("⓽ Telegram", "/telegram") 
+      .addDescription("━━━━➳༻❀✿❀༺➳━━━━")
     return message.channel.send(help);
   }
 
