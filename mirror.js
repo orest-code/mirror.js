@@ -68,18 +68,17 @@ client.on("message", async message => {
     }
 
   //serverinfo command
-    if(command === "serverinfo") { 
+    if(command === "server") {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-      .setDescription("Server Info")
+      .setDescription("**Информация о сервере**")
       .setColor("#009900")
       .setThumbnail(sicon)
-      .addField("Server Name", message.guild.name)
-      .addField("Created On", message.guild.createdAt)
-      .addField("Total Members", message.guild.memberCount)
-      .addField("You Joined", message.member.joinedAt);
-    return message.channel.send(serverembed);
-  }
+      .addField("Название сервера:", message.guild.name)
+      .addField("Участников:", message.guild.memberCount)
+      .addField("Владелец:", message.guild.owner.user.tag)
+        return message.channel.send(serverembed);
+    }
 
 
   //say command
