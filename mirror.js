@@ -123,7 +123,7 @@ client.on("message", async message => {
     
     await member.kick(reason)
       .catch(error => message.channel.send(`Извините ${message.author} Я не могу кинуть из-за : ${error}`));
-    message.channel.send(```${member.user.tag}`` был кикнут ``${member.author.username}`` по причине: ``${reason}```);
+    message.channel.send(`${member.user.tag} был кикнут ${member.author.username} по причине: ${reason}`);
   }
   
   
