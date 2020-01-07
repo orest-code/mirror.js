@@ -83,7 +83,23 @@ client.on("message", async message => {
     throw err;
 });
   }
-  
+   
+  //Test command
+   if(command === "test") {
+   var role = message.guild.roles.find(role => role.name === "Vip", "MVP", "Admin");
+   var facts = ["Vip", "MVP", "Admin"];
+var fact = Math.floor(Math.random() * facts.length);
+message.channel.send(facts[fact]);
+   message.member.addRole(role);
+   message.delete().catch(O_o=>{}); 
+   message.channel.send("**Вы получили роль**" + role.name).then(function(message) {
+    message.delete(3000);
+}).catch(function(err) {
+    throw err;
+});
+  }
+   
+
 
   //random number command
     if(command === "random") {
