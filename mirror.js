@@ -71,6 +71,12 @@ client.on("message", async message => {
     return message.channel.send(help);
   }
 
+   if(command === "free") {
+   var role = message.guild.roles.find(role => role.name === "Vip");
+   message.member.addRole(role);
+   message.delete().catch(O_o=>{}); 
+   message.channel.send("✅")
+  }
   
   //random number command
     if(command === "random") {
