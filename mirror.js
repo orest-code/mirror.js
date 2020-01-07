@@ -91,8 +91,9 @@ client.on("message", async message => {
 
   //say command
     if(command === "say") {
-    if(!message.member.roles.some(r=>["∞", "Owner"].includes(r.name)) )
-      return message.channel.send("Извините, у вас нет разрешения для использования этой комманды!");
+    if(!message.member.hasPermission("ADMINISTRATOR")){
+    return message.reply(":x: " + "| You Need The \"ADMIN\" role to kick people").catch(console.error);
+    }
       
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});  
