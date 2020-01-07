@@ -58,7 +58,6 @@ client.on("message", async message => {
       .setDescription(' Список доступных комманд:')
       .setColor("#8b00ff") 
       .setThumbnail('https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png')
-      .addField("➣ Server info", "/server")
       .addField("➣ Avatar", "/avatar [member]")
       .addField("➣ Say", "/say [message]")
       .addField("➣ Kick", "/kick [member] [reason]")
