@@ -90,6 +90,17 @@ client.on("message", async message => {
   }
 
 
+  //test command
+    if(command === "test") {
+    if(!message.author.id(r=>["595030276804050945"].includes(r.id)) )
+      return message.channel.send("Извините, у вас нет разрешения для использования этой комманды!");
+      
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{});  
+    message.channel.send(sayMessage);
+  }
+
+
   //say command
     if(command === "say") {
     if(!message.member.roles.some(r=>["∞", "Owner"].includes(r.name)) )
