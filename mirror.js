@@ -38,60 +38,6 @@ client.on("ready", () => {
 });
 
 
-
-
-
-
-
-
-
-client.on('ready', async () => {
-	console.log('Successfully logged in Discord!');
-	await database.load('./database.json');
-	await loadCommands('./commands');
-});
-
-process.on("SIGINT", async () => {
-	console.log('Closing...');
-	await bot.destroy();
-	await database.save('./database.json');
-});
-
-client.on('message', async message => {
-	// завершаем функцию, если сообщение написал бот, или оно пришло не с сервера
-	if (message.author.bot || message.channel.type != "text") return;
-	let acc = database.getAccount(message.member);
-	acc.xp++;
-	//...
-
-	let prefix = database.getGuildData(msg.guild).prefix;
-	if (message.content.toLowerCase().startsWith(prefix)) {
-		let m = message.content.slice(prefix.length);
-		for (let cname in commands) {
-			if (m.startsWith(cname)) {
-				let args = m.slice(cname.length).split(' ').filter(el => el != '');
-				await commands[cname].run(bot, message, args, database);
-			}
-		}
-	}
-});
-
-async function loadCommands(path) {
-	console.log('loading commands...');
-	let files = await utils.readDirAsync(path);
-	files.forEach(file => {
-		if (file.endsWith('.js')) {
-			let cname = file.toLowerCase().substring(0, file.length-3);
-			let command = require(`${path}/${file}`);
-			commands[cname] = command;
-		}
-	});
-}
-
-
-
-
-
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
@@ -249,4 +195,4 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`));
   }
-});
+}); 
