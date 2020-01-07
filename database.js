@@ -1,5 +1,3 @@
-const utils = require('./utils');
-
 let guilds = {};
 
 const load = async (path) => {
