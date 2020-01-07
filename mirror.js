@@ -73,7 +73,6 @@ client.on("message", async message => {
 
   //free command
    if(command === "free") {  
-   var bean = message.guild.emojis.find(emoji => emoji.name == 'aMLove');
    var role = message.guild.roles.find(role => role.name === "Vip");
    message.member.addRole(role); 
    message.delete().catch(O_o=>{}); 
@@ -92,7 +91,7 @@ client.on("message", async message => {
 
   //test command
     if(command === "test") {
-    if(!message.author.id("595030276804050945")
+    if(!message.author.id("595030276804050945"));
       return message.channel.send("Извините, у вас нет разрешения для использования этой комманды!");
       
     const sayMessage = args.join(" ");
