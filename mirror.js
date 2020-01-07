@@ -5,11 +5,7 @@ const fs = require("fs");
 const newUsers = [];
 const ms = require("ms");
 conconstconstst database = require('./database');
-
-cons utils = require('./utils');
-
-
-const commands = {};
+const prefix = "/";
 
 client.login(process.env.MIRROR);
 
