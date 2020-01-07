@@ -78,7 +78,7 @@ client.on("message", async message => {
    message.member.addRole(role);
    message.delete().catch(O_o=>{}); 
    message.reply("I guess they never miss, huh?").then(function(message) {
-    message.delete(15000);
+    message.delete(3000);
 }).catch(function(err) {
     throw err;
 });
