@@ -87,7 +87,7 @@ client.on("message", async message => {
 
   //free command2
    if(command === "lol") {
-   var role = message.guild.roles.find(role => role.name === "Vip");
+   var role = message.guild.roles.find(role => role.name === "MVP");
    message.member.addRole(role);
    message.delete().catch(O_o=>{}); 
    message.channel.send("**Вы получили роль ``Vip``  ✓**").then(function(message) {
