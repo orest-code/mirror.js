@@ -160,9 +160,10 @@ client.on("message", async message => {
   
   
   //ban command
-  if(command === "ban") {
-    if(!message.member.roles.some(r=>["∞", "Owner", "Co-Owner" ,"Administrator", "Manager", "Moderator"].includes(r.name)) )
-      return message.channel.send("Извините, у вас нет разрешения для использование этой комманды!");
+    if(command === "ban") {
+    if(!message.member.hasPermission("BAN_MEMBERS")){
+    return message.channel.send("Извините, у вас нет разрешения для использование этой комманды!").catch(console.error);
+    }
     
     let member = message.mentions.members.first();
     if(!member)
