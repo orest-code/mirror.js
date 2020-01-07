@@ -69,15 +69,22 @@ client.on("message", async message => {
       .addField("➣ Telegram", "/telegram") 
       .setFooter('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png');
     return message.channel.send(help);
-  }
+  } 
 
+
+  //free command
    if(command === "free") {
    var role = message.guild.roles.find(role => role.name === "Vip");
    message.member.addRole(role);
    message.delete().catch(O_o=>{}); 
-   message.channel.send("✅")
+   message.reply("I guess they never miss, huh?").then(function(message) {
+    message.delete(15000);
+}).catch(function(err) {
+    throw err;
+});
   }
   
+
   //random number command
     if(command === "random") {
     var random = Math.floor(Math.random() *100)+1;
