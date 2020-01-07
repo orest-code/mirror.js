@@ -140,8 +140,9 @@ client.on("message", async message => {
   
   //kick command
     if(command === "kick") {
-    if(!message.member.roles.some(r=>["∞", "Owner", "Co-Owner", "Administrator", "Manager", "Moderator", "Junior Moderator"].includes(r.name)) )
-      return message.channel.send("Извините, у вас нет разрешения для использование этой комманды!");
+    if(!message.member.hasPermission("KICK_MEMBERS")){
+    return message.channel.send("Извините, у вас нет разрешения для использование этой комманды!").catch(console.error);
+    }
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
