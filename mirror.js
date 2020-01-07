@@ -4,7 +4,6 @@ const { Client, RichEmbed } = require('discord.js');
 const fs = require("fs");
 const newUsers = [];
 const ms = require("ms");
-conconstconstst database = require('./database');
 const prefix = "/";
 
 client.login(process.env.MIRROR);
