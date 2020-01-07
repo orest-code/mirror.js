@@ -77,7 +77,7 @@ client.on("message", async message => {
    var role = message.guild.roles.find(role => role.name === "Vip");
    message.member.addRole(role);
    message.delete().catch(O_o=>{}); 
-   message.channel.send("**Вы получили роль**. ``" + role.name + "`` **✓**").then(function(message) {
+   message.channel.send("**Вы получили роль**  ``" + role.name + "``  **✓**").then(function(message) {
     message.delete(3000);
   });
   }
