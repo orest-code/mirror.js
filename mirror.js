@@ -75,7 +75,7 @@ client.on("message", message => {
         .setColor("#8b00ff") 
         .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
         .setThumbnail('https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png') 
-        .setDescription("Уровень пользователя " + member.name.tag)
+        .setDescription(`Уровень пользователя ${member.user.tag}`)
         .addField("Уровень:", memberInfo.level)
         .addField("Прогресс", memberInfo.xp+"/100")
         message.channel.sendEmbed(embed2)
