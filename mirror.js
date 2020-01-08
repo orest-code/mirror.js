@@ -68,13 +68,6 @@ client.on("message", message => {
         .addField("Уровень", userInfo.level)
         .addField("Прогресс", userInfo.xp+"/100");
         if(!member) return message.channel.sendEmbed(embed)
-        let memberInfo = db[member.id]
-        let embed2 = new Discord.RichEmbed()
-        .setColor("#8b00ff")
-        .addField("Level", memberInfo.level)
-        .addField("XP", memberInfo.xp+"/100")
-        message.channel.sendEmbed(embed2)
-    }
     fs.writeFile("./database.json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
       });
