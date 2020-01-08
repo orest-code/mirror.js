@@ -39,7 +39,7 @@ client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
     message.channel.send('**Чтобы посмотреть список коммадн напишите  ``/help``**');
   }
-});
+}); 
 
 
 //commands
