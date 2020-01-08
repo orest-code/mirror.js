@@ -119,7 +119,16 @@ client.on("message", async message => {
     if(command === "ping") {
     const m = await message.channel.send("Ping?");
     m.edit(`**Pong! ${m.createdTimestamp - message.createdTimestamp}ms**`);
-  }
+  } 
+
+
+  //prefix command
+    if(command === "prefix") {
+	if (args[0]) {
+		database.getGuildData(message.guild).prefix = args[0];
+		message.channel.send(`Новый префикс для команд: '${args[0]}'`);
+	}
+    }
   
   
   //social network
