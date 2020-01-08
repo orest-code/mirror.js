@@ -4,7 +4,6 @@ const { Client, RichEmbed } = require('discord.js');
 const config = require('./config.json');
 const fs = require("fs");
 let db = JSON.parse(fs.readFileSync("./database.json", "utf8"));
-const fs = require("fs");
 const newUsers = [];
 const ms = require("ms");
 
