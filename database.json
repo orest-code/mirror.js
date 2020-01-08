@@ -1,5 +1,3 @@
-let guilds = {};
-
 const getGuildData = (guild) => {
 	if (!guilds[guild.id]) {
 		guilds[guild.id] = {
@@ -8,11 +6,4 @@ const getGuildData = (guild) => {
 		}
 	}
 	return guilds[guild.id];
-}
-
-module.exports = {
-	load: load,
-	save: save,
-	getGuildData: getGuildData,
-	getAccount: getAccount
 }
