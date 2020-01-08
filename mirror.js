@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js'); 
 const config = require('./config.json');
 const fs = require("fs");
-let db = JSON.parse(fs.readFileSync("./database.json", "utf8"));
+const database = require('./database');
 const newUsers = [];
 const ms = require("ms");
 
