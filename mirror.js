@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js'); 
 const config = require('./config.json');
 const fs = require("fs");
-const database = require('./database');
 const newUsers = [];
 const ms = require("ms");
 
