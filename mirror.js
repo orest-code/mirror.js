@@ -42,7 +42,7 @@ client.on('message', message => {
 });
 
 
-//xp
+//rank system
 client.on("message", message => {
     if (message.author.bot) return; // ignore bots
 
@@ -59,31 +59,26 @@ client.on("message", message => {
         message.reply("Congratulations, you level up")
     }
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-    if(command === "rank") {
+    const cmd = args.shift().toLowerCase();
+    if(cmd === "info") {
         let userInfo = db[message.author.id];
         let member = message.mentions.members.first();
         let embed = new Discord.RichEmbed()
-        .setColor("#8b00ff") 
-        .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
-        .setThumbnail('https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png')  
-        .addField("Уровень:", userInfo.level)
-        .addField("Прогресс:", userInfo.xp+"/100");
+        .setColor("#8b00ff")
+        .addField("Уровень", userInfo.level)
+        .addField("Прогресс", userInfo.xp+"/100");
         if(!member) return message.channel.sendEmbed(embed)
         let memberInfo = db[member.id]
         let embed2 = new Discord.RichEmbed()
-        .setColor("#8b00ff") 
-        .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
-        .addField("Уровень:", memberInfo.level)
-        .addField("Прогресс", memberInfo.xp+"/100")
+        .setColor("#8b00ff")
+        .addField("Level", memberInfo.level)
+        .addField("XP", memberInfo.xp+"/100")
         message.channel.sendEmbed(embed2)
     }
     fs.writeFile("./database.json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
       });
 })
-
-
 
 
 
