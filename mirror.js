@@ -42,40 +42,6 @@ client.on('message', message => {
 });
 
 
-//rank system
-client.on("message", message => {
-    if (message.author.bot) return; // ignore bots
-
-    // if the user is not on db add the user and change his values to 0
-    if (!db[message.author.id]) db[message.author.id] = {
-        xp: 0,
-        level: 0
-      };
-    db[message.author.id].xp++;
-    let userInfo = db[message.author.id];
-    if(userInfo.xp > 100) {
-        userInfo.level++
-        userInfo.xp = 0
-        message.reply("Congratulations, you level up")
-    }
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
-    if(cmd === "info") {
-        let userInfo = db[message.author.id];
-        let member = message.mentions.members.first();
-        let embed = new Discord.RichEmbed()
-        .setColor("#8b00ff")
-        .addField("Уровень", userInfo.level)
-        .addField("Прогресс", userInfo.xp+"/100");
-        if(!member) return message.channel.sendEmbed(embed)
-    fs.writeFile("./database.json", JSON.stringify(db), (x) => {
-        if (x) console.error(x)
-      });
-})
-
-
-
-
 //commands
 client.on("message", async message => {
   
