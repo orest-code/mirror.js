@@ -66,7 +66,6 @@ client.on("message", async message => {
       .addField("➣ Ping", "/ping")
       .addField("➣ VK", "/vk")
       .addField("➣ Telegram", "/telegram") 
-      .setFooter(`${member.user.username}, ${member.user.AvatarURL}`);
     return message.channel.send(help);
   } 
 
