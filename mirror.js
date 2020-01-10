@@ -51,8 +51,6 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  var mutedrole = message.guild.roles.find("mute", "Muted"); 
-
 
   //help command
     if(command === "help") {
