@@ -66,7 +66,7 @@ client.on("message", async message => {
       .addField("➣ Ping", "/ping")
       .addField("➣ VK", "/vk")
       .addField("➣ Telegram", "/telegram") 
-      .setFooter('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png');
+      .setFooter('member.displayName, member.user.displayAvatarURL');
     return message.channel.send(help);
   } 
 
