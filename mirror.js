@@ -33,15 +33,6 @@ client.on("ready", () => {
 });
 
 
-//delete invite links
-if (message.content.includes('discord.gg/') || message.content.includes('discordapp.com/invite/')) { //if it contains an invite link
-  if (!message.member.hasPermission("ADMINISTRATOR")) {
-    message.delete() //delete the message
-      .then(message.member.send(ban nahoi));
-  }
-} 
-
-
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
