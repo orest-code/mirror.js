@@ -37,7 +37,7 @@ client.on("ready", () => {
 if (message.content.includes('discord.gg/') || message.content.includes('discordapp.com/invite/')) { //if it contains an invite link
   if (!message.member.hasPermission("ADMINISTRATOR")) {
     message.delete() //delete the message
-      .then(message.member.send(ms.INVITELINK));
+      .then(message.member.send(ban nahoi));
   }
 } 
 
