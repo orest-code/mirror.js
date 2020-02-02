@@ -36,7 +36,7 @@ client.on("ready", () => {
 client.on('message', (message) => { //whenever a message is sent
   if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
     message.delete() //delete the message 
-      .then(message.channel.send(' Пожалуйста, не отправляйте приглашения в чат!'))
+      .then(message.channel.send('```Пожалуйста, не отправляйте приглашения в чат!```'))
   }
 });
 
