@@ -34,7 +34,12 @@ client.on("ready", () => {
 
 
 client.on('message', (message) => { //whenever a message is sent
-  if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
+  if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link 
+    const arrayOfUsersIds = ['595030276804050945'];
+
+    for (let i = 0; i < arrayOfUsersIds.length; i++) {
+    if (message.author.id === arrayOfUsersIds[i]) return;
+  };
     message.delete() //delete the message 
       .then(message.channel.send('```Пожалуйста, не отправляйте приглашения в чат!```'))
   }
