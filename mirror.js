@@ -35,8 +35,10 @@ client.on("ready", () => {
 
 client.on('message', (message) => { //whenever a message is sent
   if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
-    message.delete() //delete the message
-      .then(message.channel.send('Ты чо ебанутый?:\n**В жопу засунь эту ссылку!🤬**'))
+    message.delete() //delete the message 
+    let msg = new Discord.RichEmbed()
+      .setDescription('Ну вот зачем ты без разрешения ссылки кидаешь? 😕')
+      .then(message.channel.send(msg))
   }
 });
 
