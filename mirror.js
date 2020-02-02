@@ -33,7 +33,7 @@ client.on("ready", () => {
 });
 
 
-bot.on('message', (message) => { //whenever a message is sent
+client.on('message', (message) => { //whenever a message is sent
   if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
     message.delete() //delete the message
       .then(message.channel.send('Ты чо ебанутый?:\n**В жопу засунь эту ссылку!🤬**'))
