@@ -79,7 +79,6 @@ client.on("message", async message => {
       .addField("➣ Random number", "/ramdom") 
       .addField("➣ Ping", "/ping")
       .addField("➣ VK", "/vk")
-      .addField("➣ Telegram", "/telegram") 
     return message.channel.send(help);
   } 
 
@@ -142,13 +141,6 @@ client.on("message", async message => {
       .setURL('https://vk.com/mirrords')
     message.channel.send(embed);
   }
-    if(command === "telegram") {
-          const embed = new RichEmbed() 
-      .setTitle('Группа Телеграмм')
-      .setColor(0x8b00ff)
-      .setURL('https://t.me/mirrords')
-    message.channel.send(embed);
-  } 
 
   
   //kick command
