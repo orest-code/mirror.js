@@ -41,7 +41,7 @@ client.on('message', (message) => { //whenever a message is sent
     if (message.author.id === arrayOfUsersIds[i]) return;
   };
     message.delete() //delete the message 
-      .then(message.channel.send('```Пожалуйста, не отправляйте приглашения в чат!```'))
+      .then(message.channel.send("<@" + message.author.id + ">" + "Пожалуйста, не отправляйте приглашения в чат!"))
   }
 });
 
