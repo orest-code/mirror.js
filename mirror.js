@@ -113,6 +113,20 @@ client.on("message", async message => {
   }
 
 
+  //embed command
+    if(command === "embed") {
+    if(!message.member.hasPermission("ADMINISTRATOR")){
+    return message.channel.send("Извините, у вас нет разрешения для использование этой комманды!").catch(console.error);
+    }
+    const embedMessage = args.join(" ");  
+    const embed = new RichEmbed()  
+       .setColor("#8b00ff") 
+       .setTitle(embedMessage) 
+    message.delete().catch(O_o=>{}); 
+    message.channel.send(embed) 
+  } 
+
+
   //avatar command
     if(command === "avatar") {
        let user = message.mentions.users.first();
