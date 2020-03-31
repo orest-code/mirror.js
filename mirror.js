@@ -53,6 +53,31 @@ client.on('message', message => {
   }
 }); 
 
+//welcome message
+client.on('guildMemberAdd', member => {
+client.on('message', 
+
+
+var role = member.guild.roles.find('『 Guest 』', '『 ❊ 』'); // Variable to get channel ID
+member.addRole(role); // Adds the default role to members
+
+member.guild.channels.get('666270582928572427').send({embed: {
+color: 8b00ff,
+title: "**MIRROR**",
+url: "mirror.is-best.net",
+description: "Welcome *" + member + "* to the **MIRROR** discord server!",
+fields: [{
+    name: "Information",
+    value: "Some info on the server"
+  }
+],
+timestamp: new Date(),
+footer: {
+  icon_url: client.user.avatarURL,
+  text: "© MIRROR 2018 - 2020"
+}
+}}); });
+
 
 //commands
 client.on("message", async message => {
