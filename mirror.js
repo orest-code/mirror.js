@@ -3,8 +3,9 @@ const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js'); 
 const config = require('./config.json');
 const fs = require("fs");
-const newUsers = [];
 const ms = require("ms");
+const annoncechannel = "666270582928572427";
+
 
 client.login(process.env.MIRROR);
 
@@ -52,6 +53,29 @@ client.on('message', message => {
     message.channel.send('**Чтобы посмотреть список коммадн напишите  ``/help``**');
   }
 }); 
+
+//welcome-leave message
+client.on("guildMemberAdd", member => {
+    var channel = bot.channels.get(annoncechannel)
+    let embed = new Discord.RichEmbed()
+    .setTitle(member.user.username+ " Vient de rejoindre le serveur !")
+    .setDescription("N'hésitez pas à lui souhaiter la bienvenue !")
+    .addField("Il y'a maintenant "+member.guild.members.size+" membres sur le serveur", "merci à vous !")
+    .setColor("GREEN")
+    .setThumbnail(member.user.displayAvatarURL)
+    channel.send(embed)
+});
+
+client.on("guildMemberRemove", member =>{
+    var channel = bot.channels.get(annoncechannel)
+    let embed = new Discord.RichEmbed()
+    .setTitle(member.user.username+ " vient de quitter le serveur.")
+    .setDescription('On espère le revoir bientôt')
+    .addField("Il y'a maintenant "+member.guild.members.size+ " membres sur le serveur", "merci à vous ! ")
+    .setColor("RED")
+    .setThumbnail(member.user.displayAvatarURL)
+    channel.send(embed)
+})
 
 
 //commands
