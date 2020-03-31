@@ -54,22 +54,6 @@ client.on('message', message => {
 }); 
 
 
-//welcome message
-client.on('guildMemberAdd', member => {
-client.on('message', 
-
-var role = message.guild.roles.find(role => role.name === "『 Vip 』");
-message.member.addRole(role);
-
-member.guild.channels.get('666270582928572427').send({embed: {
-    const embed = new RichEmbed()  
-       .setColor("#8b00ff") 
-       .setTitle("Welcome" + "<@" + message.author.id + ">")
-    message.channel.send(embed)
-}}));
-});
-
-
 //commands
 client.on("message", async message => {
   
