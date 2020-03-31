@@ -54,6 +54,13 @@ client.on('message', message => {
 }); 
 
 
+//welcome message
+bot.on("guildMemberAdd", member => {
+    let guild = member.guild;
+    guild.defaultChannel.sendMessage(`Welcome ${member.user}`).catch(console.error);
+  });
+
+
 //commands
 client.on("message", async message => {
   
