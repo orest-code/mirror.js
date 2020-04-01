@@ -80,6 +80,7 @@ client.on("message", async message => {
       .addField("➣ Ban", "/ban [member] [reason]")
       .addField("➣ Random number", "/ramdom") 
       .addField("➣ Ping", "/ping")
+      .addField("➣ Free", "/free")
       .addField("➣ VK", "/vk")
       .setFooter(message.author.username, message.author.displayAvatarURL);
     return message.channel.send(help);
