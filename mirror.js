@@ -75,7 +75,7 @@ client.on("message", async message => {
       .setThumbnail('https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png')
       .addField("➣ Avatar", "/avatar [member]")
       .addField("➣ Say", "/say [message]")
-      .addField("➣ Say", "/embed [message]")
+      .addField("➣ Embed", "/embed [message]")
       .addField("➣ Kick", "/kick [member] [reason]")
       .addField("➣ Ban", "/ban [member] [reason]")
       .addField("➣ Random number", "/ramdom") 
