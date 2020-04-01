@@ -81,6 +81,7 @@ client.on("message", async message => {
       .addField("➣ Random number", "/ramdom") 
       .addField("➣ Ping", "/ping")
       .addField("➣ VK", "/vk")
+      .setFooter('MIRROR', 'client.user.avatarURL');
     return message.channel.send(help);
   } 
 
