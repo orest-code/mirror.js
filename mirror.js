@@ -81,7 +81,7 @@ client.on("message", async message => {
       .addField("➣ Random number", "/ramdom") 
       .addField("➣ Ping", "/ping")
       .addField("➣ VK", "/vk")
-      .setFooter(client.user.username, client.user.displayAvatarURL);
+      .setFooter(member.user.username, client.user.displayAvatarURL);
     return message.channel.send(help);
   } 
 
