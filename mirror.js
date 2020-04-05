@@ -116,6 +116,7 @@ client.on("message", async message => {
       .addField("Ban", "/ban [member] [reason]")
       .addField("Random number", "/ramdom") 
       .addField("Ping", "/ping")
+      .setTimestamp()
     return message.channel.send(help);
   } 
 
@@ -133,16 +134,17 @@ client.on("message", async message => {
       .addField("Channels", message.guild.channels.size)
       .addField("Roles", message.guild.roles.size)
       .setThumbnail(message.guild.iconURL)
+      .setTimestamp()
     return message.channel.send(server);
 }
 
 
   //free command
-   if(command === "free") {  
+   if(command === "free") {
    var role = message.guild.roles.find(role => role.name === "『 Vip 』");
    message.member.addRole(role); 
    message.delete().catch(O_o=>{}); 
-   message.channel.send("**Вы получили роль**  ``" + role.name + "``  ✓").then(function(message) {
+   message.channel.send("**You got the role**  ``" + role.name + "``  ✓").then(function(message) {
     message.delete(3000);
   });
   }
