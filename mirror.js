@@ -94,13 +94,11 @@ client.on("message", async message => {
       .setColor("#8b00ff")
       .addField("Name", message.guild.name)
       .addField("ID", message.guild.id)
-      .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)
+      .addField("Owner", message.guild.owner.user.username)
       .addField("Region", region[message.guild.region])
-      .addField("Total | Humans | Bots", `${message.guild.members.size} | ${message.guild.members.filter(member => !member.user.bot).size} | ${message.guild.members.filter(member => member.user.bot).size}`)
-      .addField("Verification Level", verifLevels[message.guild.verificationLevel])
+      .addField("Users", message.guild.members.size)
       .addField("Channels", message.guild.channels.size)
       .addField("Roles", message.guild.roles.size)
-      .addField("Creation Date", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`)
       .setThumbnail(message.guild.iconURL)
     return message.channel.send(server);
 }
