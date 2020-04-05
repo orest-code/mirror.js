@@ -89,30 +89,11 @@ client.on("message", async message => {
   //server info
     if(command === "server") {
     let server = new Discord.RichEmbed()
-	let verifLevels = ["None", "Low", "Medium", "(╯°□°）╯︵  ┻━┻", "┻━┻ミヽ(ಠ益ಠ)ノ彡┻━┻"];
-        let region = {
-        "brazil": ":flag_br: Brazil",
-        "eu-central": ":flag_eu: Central Europe",
-        "singapore": ":flag_sg: Singapore",
-        "us-central": ":flag_us: U.S. Central",
-        "sydney": ":flag_au: Sydney",
-        "us-east": ":flag_us: U.S. East",
-        "us-south": ":flag_us: U.S. South",
-        "us-west": ":flag_us: U.S. West",
-        "eu-west": ":flag_eu: Western Europe",
-        "vip-us-east": ":flag_us: VIP U.S. East",
-        "london": ":flag_gb: London",
-        "amsterdam": ":flag_nl: Amsterdam",
-        "hongkong": ":flag_hk: Hong Kong",
-        "russia": ":flag_ru: Russia",
-        "southafrica": ":flag_za:  South Africa"
-    };
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#8b00ff")
       .addField("Name", message.guild.name)
       .addField("Owner", "<@" + message.guild.owner.user.id + ">")
-      .addField("Region", region[message.guild.region])
-      .addField("Verification Level", verifLevels[message.guild.verificationLevel])
+      .addField("Region", message.guild.region)
       .addField("Members", message.guild.members.size)
       .addField("Channels", message.guild.channels.size)
       .addField("Roles", message.guild.roles.size)
