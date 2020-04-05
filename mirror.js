@@ -95,7 +95,7 @@ client.on("message", async message => {
       .addField("Owner", "<@" + message.guild.owner.user.id + ">")
       .addField("Region", message.guild.region)
       .addField("Verification Level", message.guild.verificationLevel)
-      .addField("Total | Humans | Bots", message.guild.members.size | message.guild.members.filter(member => !member.user.bot).size | message.guild.members.filter(member => member.user.bot).size)
+      .addField("Members", message.guild.members.size)
       .addField("Channels", message.guild.channels.size)
       .addField("Roles", message.guild.roles.size)
       .setThumbnail(message.guild.iconURL)
