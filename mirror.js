@@ -4,7 +4,6 @@ const { Client, RichEmbed } = require('discord.js');
 const config = require('./config.json');
 const fs = require("fs");
 const ms = require("ms");
-new Discord.GuildMember(client, data, guild);
 
 
 client.login(process.env.MIRROR);
