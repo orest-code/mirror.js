@@ -92,13 +92,10 @@ client.on("message", async message => {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .addField("Name", message.guild.name)
-      .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)
-      .addField("Region", region[message.guild.region])
+      .addField("Owner", `${message.guild.owner.user.username}`)
       .addField("Total | Humans | Bots", `${message.guild.members.size} | ${message.guild.members.filter(member => !member.user.bot).size} | ${message.guild.members.filter(member => member.user.bot).size}`)
-      .addField("Verification Level", verifLevels[message.guild.verificationLevel])
       .addField("Channels", message.guild.channels.size)
       .addField("Roles", message.guild.roles.size)
-      .addField("Creation Date", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`)
       .setThumbnail(message.guild.iconURL)
     return message.channel.send(help);
 }
