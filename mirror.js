@@ -261,3 +261,20 @@ client.on("message", async message => {
       .catch(error => message.channel.send(`Failed to delete messages due to:: ${error}`));
   }
 }); 
+
+
+//change nickname
+    if(command === "nick") {
+    if(!message.member.hasPermission("ADMINISTRATOR")){
+    return message.channel.send("Sorry, you do not have permission to use this command!").catch(console.error);
+    }
+    const nick = args.join(" ")
+    let member = message.mentions.members.first();
+	member = await member.setNickname(nick);
+	message.channel.send(member.displayName + nick);
+	}
+       } catch (e) {
+          console.error(e);
+          return message.channel.send("Something went wrong when running this command!");
+       }
+});
