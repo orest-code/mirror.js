@@ -53,12 +53,12 @@ if(guild.systemChannel){
 //leave message
 client.on("guildMemberRemove", (member) => {
 let guild = member.guild; 
-let memberid = member.user.id;
+let membername = member.user.username;
 if(guild.systemChannel){
 	guild.systemChannel.send(new Discord.RichEmbed() 
 	.setTitle("LEAVE")
         .setColor("#ff0000") 
-	.setDescription("<@" + memberid + ">" + " has left the server")
+	.setDescription(membername + " has left the server")
 	.setThumbnail(member.user.displayAvatarURL)
 	.addField("Members now", member.guild.memberCount)
 	.setTimestamp()
