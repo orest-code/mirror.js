@@ -261,3 +261,13 @@ client.on("message", async message => {
       .catch(error => message.channel.send(`Failed to delete messages due to:: ${error}`));
   }
 }); 
+
+
+//change nickname
+    if(command === "help") {
+	const embed = new Discord.MessageEmbed().setColor('#FF00FF')
+	const reason = args.reason ? args.reason.join(' ') : '';
+	message.guild.me.setNickname(args.name.join(' '), reason).then(
+	message.channel.send(embed.setDescription('You have successfully changed my nickname!'))
+	).catch(e => e)
+    };
