@@ -73,17 +73,16 @@ client.on("message", async message => {
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
       .setDescription(' Список доступных комманд:')
       .setColor("#8b00ff") 
-      .setThumbnail('https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png')
-      .addField("➣ Avatar", "/avatar [member]")
-      .addField("➣ Say", "/say [message]")
-      .addField("➣ Embed", "/embed [message]")
-      .addField("➣ Kick", "/kick [member] [reason]")
-      .addField("➣ Ban", "/ban [member] [reason]")
-      .addField("➣ Random number", "/ramdom") 
-      .addField("➣ Ping", "/ping")
-      .addField("➣ Free", "/free")
-      .addField("➣ VK", "/vk")
-      .setFooter(message.author.username, message.author.displayAvatarURL);
+      .setThumbnail(message.guild.iconURL)
+      .addField("Avatar", "/avatar [member]")
+      .addField("Say", "/say [message]")
+      .addField("Embed", "/embed [message]")
+      .addField("Kick", "/kick [member] [reason]")
+      .addField("Ban", "/ban [member] [reason]")
+      .addField("Random number", "/ramdom") 
+      .addField("Ping", "/ping")
+      .addField("Free", "/free")
+      .addField("VK", "/vk")
     return message.channel.send(help);
   } 
 
