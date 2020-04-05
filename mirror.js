@@ -39,14 +39,33 @@ let guild = member.guild;
 let memberid = member.user.id;
 if(guild.systemChannel){
 	guild.systemChannel.send(new Discord.RichEmbed() 
-	.setTitle("A new user joined") // Calling method setTitle on constructor. 
-	.setDescription("<@" + memberid + ">" + " has joined the guild")
+	.setTitle("JOIN")
+        .setColor("#00ff00") 
+	.setDescription("<@" + memberid + ">" + " has joined the server")
 	.setThumbnail(member.user.displayAvatarURL)
 	.addField("Members now", member.guild.memberCount)
 	.setTimestamp()
 	);
 }
 });
+
+
+//leave message
+client.on("guildMemberRemove", (member) => {
+let guild = member.guild; 
+let memberid = member.user.id;
+if(guild.systemChannel){
+	guild.systemChannel.send(new Discord.RichEmbed() 
+	.setTitle("LEAVE")
+        .setColor("#ff0000") 
+	.setDescription("<@" + memberid + ">" + " has left the server")
+	.setThumbnail(member.user.displayAvatarURL)
+	.addField("Members now", member.guild.memberCount)
+	.setTimestamp()
+	);
+}
+});
+
 
 //discord invites
 client.on('message', (message) => { //whenever a message is sent
