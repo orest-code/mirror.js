@@ -264,7 +264,7 @@ client.on("message", async message => {
 
 
 //change nickname
-    if(command === "help") {
+    if(command === "nick") {
 	const embed = new Discord.MessageEmbed().setColor('#FF00FF')
 	const reason = args.reason ? args.reason.join(' ') : '';
 	message.guild.me.setNickname(args.name.join(' '), reason).then(
