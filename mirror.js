@@ -98,6 +98,12 @@ client.on("message", async message => {
   }
 
 
+   if(command === "emoji") {
+   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
+   message.channel.send(emojiList);
+  }
+
+
   //random number command
     if(command === "random") {
     var random = Math.floor(Math.random() *100)+1;
