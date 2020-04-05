@@ -103,6 +103,18 @@ client.on("message", async message => {
 }
 
 
+  //profile
+    if(command === "server") {
+    let server = new Discord.RichEmbed()
+      .setAuthor(message.author.user.username, message.author.user.displayAvatarURL)
+      .setColor("#8b00ff")
+      .addField("Name", "<@" + message.author.user.id + ">")
+      .addField("Roles", message.author.user.roles.size)
+      .setThumbnail(message.author.user.displayAvatarURL)
+    return message.channel.send(server);
+}
+
+
   //free command
    if(command === "free") {  
    var role = message.guild.roles.find(role => role.name === "『 Vip 』");
