@@ -33,23 +33,8 @@ client.on("ready", () => {
   });
 });
 
-// Get our server
-const guild = bot.guilds.get('521249346050850816');
 
-//users
-const totalUsers = bot.channels.get('696277601907376128');
-
-setInterval(function() {
-  console.log('Getting stats update..')
-
-var userCount = guild.memberCount;
-
-  totalUsers.setName("Total Users: " + userCount)
-  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-  .catch(console.error);
-
-
-//nodiscordlink
+//discord invites
 client.on('message', (message) => { //whenever a message is sent
   if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link 
     const arrayOfUsersIds = ['595030276804050945', '472320129514864651'];
