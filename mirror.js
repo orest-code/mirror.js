@@ -94,6 +94,7 @@ client.on("message", async message => {
       .addField("Name", message.guild.name)
       .addField("Owner", "<@" + message.guild.owner.user.id + ">")
       .addField("Region", message.guild.region)
+      .addField("Verification Level", message.guild.verificationLevel)
       .addField("Members", message.guild.members.size)
       .addField("Channels", message.guild.channels.size)
       .addField("Roles", message.guild.roles.size)
