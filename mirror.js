@@ -4,6 +4,7 @@ const { Client, RichEmbed } = require('discord.js');
 const config = require('./config.json');
 const fs = require("fs");
 const ms = require("ms");
+new Discord.GuildMember(client, data, guild);
 
 
 client.login(process.env.MIRROR);
@@ -115,18 +116,6 @@ client.on("message", async message => {
       .addField("Roles", message.guild.roles.size)
       .setThumbnail(message.guild.iconURL)
     return message.channel.send(server);
-}
-
-
-  //profile
-    if(command === "profile") {
-    let profile = new Discord.RichEmbed()
-      .setAuthor(message.author.user.username, message.author.user.displayAvatarURL)
-      .setColor("#8b00ff")
-      .addField("Name", "<@" + message.author.user.id + ">")
-      .addField("Roles", message.author.user.roles.size)
-      .setThumbnail(message.author.user.displayAvatarURL)
-    return message.channel.send(profile);
 }
 
 
