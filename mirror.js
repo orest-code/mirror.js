@@ -92,12 +92,11 @@ client.on("message", async message => {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .addField("Name", message.guild.name)
-      .addField("Owner", `${message.guild.owner.user.username}`)
-      .addField("Total | Humans | Bots", `${message.guild.members.size} | ${message.guild.members.filter(member => !member.user.bot).size} | ${message.guild.members.filter(member => member.user.bot).size}`)
+      .addField("Owner", message.guild.owner.user.username)
       .addField("Channels", message.guild.channels.size)
       .addField("Roles", message.guild.roles.size)
       .setThumbnail(message.guild.iconURL)
-    return message.channel.send(help);
+    return message.channel.send(server);
 }
 
 
