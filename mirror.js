@@ -98,7 +98,7 @@ client.on("message", async message => {
   }
 
 
-   if(command === "emoji") {
+   if (message.content === "listemojis") {
    const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
    message.channel.send(emojiList);
   }
