@@ -4,7 +4,6 @@ const { Client, RichEmbed } = require('discord.js');
 const config = require('./config.json');
 const fs = require("fs");
 const ms = require("ms");
-const annoncechannel = "666270582928572427";
 
 
 client.login(process.env.MIRROR);
@@ -91,7 +90,7 @@ client.on("message", async message => {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#8b00ff")
-      .addField("Name", message.guild.name)
+      .addField("Name", "<@" + message.guild.id + ">")
       .addField("Owner", message.guild.owner.user.username)
       .addField("Members", message.guild.members.size)
       .addField("Channels", message.guild.channels.size)
