@@ -89,13 +89,13 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-  if (message.content === 'ping') {
-    let help = new Discord.RichEmbed()
+  if (message.content === '911') {
+    let 911 = new Discord.RichEmbed()
       .setAuthor(message.author.user.username, message.author.user.displayAvatarURL, 'https://discord.gg/Rnb9SSU')
-      .setDescription("Вызывает" + "<@&618128028748349450>")
+      .setDescription("Вызывает <@&618128028748349450>")
       .setColor("#8b00ff") 
       .setTimestamp()
-    return message.channel.send(help);
+    return message.channel.send(911);
   })
 };
 
