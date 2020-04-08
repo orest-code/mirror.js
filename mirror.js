@@ -86,9 +86,10 @@ client.on('message', message => {
     let mod = new Discord.RichEmbed()
     let name = message.author.user.username
     let avatar = message.author.user.displayAvatarURL
-      .setAuthor(name, avatar)
-      .setDescription('Вызывает <@&618128028748349450>')
-      .setColor("#8b00ff") 
+      .setDescription(name)
+      .setThumbnail(avatar)
+      .setColor("#8b00ff")
+      .addField("Вызывает <@&618128028748349450>")
       .setTimestamp()
    return message.channel.send(mod);
   }
