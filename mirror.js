@@ -224,7 +224,7 @@ client.on("message", async message => {
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
-      return message.channel.send("Укажите пользователя которого хотите выгнать!");
+      return message.channel.send("Используйте: /kick [учасник] [причина]");
     if(!member.kickable) 
       return message.channel.send("Я не могу выгнать этого пользователя!");
     
@@ -245,7 +245,7 @@ client.on("message", async message => {
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.channel.send("Укажите пользователя которого хотите заблокировать!");
+      return message.channel.send("Используйте: /ban [учасник] [причина]");
     if(!member.bannable) 
       return message.channel.send("Я не могу заблокировать этого пользователя!");
 
@@ -267,10 +267,10 @@ client.on("message", async message => {
     const deleteCount = parseInt(args[0], 10);
     
     if(!deleteCount || deleteCount < 2 || deleteCount > 1000)
-      return message.channel.send("Please indicate how many messages you want to delete!");
+      return message.channel.send("Пожалуйста укажите сколько вы хотите удалить сообщений!");
     
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`));
-  }
+  
 });
