@@ -81,6 +81,13 @@ client.on('message', (message) => { //whenever a message is sent
 });
 
 
+client.on('message', message => {
+  if (message.content === '911') {
+    message channel.send("<@" + message.author.id + ">" + "Вызывает" + "<@&618128028748349450>");
+  }
+});
+
+
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
