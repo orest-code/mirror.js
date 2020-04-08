@@ -88,6 +88,18 @@ client.on('message', message => {
 });
 
 
+client.on('message', message => {
+  if (message.content === 'ping') {
+    let help = new Discord.RichEmbed()
+      .setAuthor(message.author.user.username, message.author.user.displayAvatarURL, 'https://discord.gg/Rnb9SSU')
+      .setDescription("Вызывает" + "<@&618128028748349450>")
+      .setColor("#8b00ff") 
+      .setTimestamp()
+    return message.channel.send(help);
+  })
+};
+
+
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
