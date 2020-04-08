@@ -83,21 +83,13 @@ client.on('message', (message) => { //whenever a message is sent
 
 client.on('message', message => {
   if (message.content === '911') {
-    message channel.send("<@" + message.author.id + ">" + "Вызывает" + "<@&618128028748349450>");
-  }
-});
-
-
-client.on('message', message => {
-  if (message.content === '911') {
     let 911 = new Discord.RichEmbed()
       .setAuthor(message.author.user.username, message.author.user.displayAvatarURL, 'https://discord.gg/Rnb9SSU')
       .setDescription("Вызывает <@&618128028748349450>")
       .setColor("#8b00ff") 
       .setTimestamp()
     return message.channel.send(911);
-  })
-};
+  }});
 
 
 //bot mention
