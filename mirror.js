@@ -84,16 +84,6 @@ client.on('message', message => {
 }); 
 
 
-//bot mention
-client.on('message', message => {
-  if (message.content === '<@632570913858125824>') {
-    let bot = new Discord.RichEmbed()
-      .setAuthor(message.author.username, message.author.displayAvatarURL)
-      .setDescription('Чтобы посмотреть список комманд используйте: /help')
-      .setColor("#8b00ff") 
-    message.channel.send(bot);
-
-
 //commands
 client.on("message", async message => {
   
