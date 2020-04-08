@@ -37,10 +37,9 @@ client.on("guildMemberAdd", (member) => {
 let guild = member.guild; 
 let memberid = member.user.id;
 if(guild.systemChannel){
-	guild.systemChannel.send(new Discord.RichEmbed() 
-	.setTitle("JOIN")
-        .setColor("#00ff00") 
-	.setDescription("<@" + memberid + ">" + " has joined the server")
+	guild.systemChannel.send(new Discord.RichEmbed()
+        .setColor("#8b00ff") 
+	.setDescription("<@" + memberid + ">" + " Присоединился к серверу")
 	.setThumbnail(member.user.displayAvatarURL)
 	.addField("Members now", member.guild.memberCount)
 	.setTimestamp()
@@ -54,10 +53,9 @@ client.on("guildMemberRemove", (member) => {
 let guild = member.guild; 
 let membertag = member.user.tag;
 if(guild.systemChannel){
-	guild.systemChannel.send(new Discord.RichEmbed() 
-	.setTitle("LEAVE")
-        .setColor("#ff0000") 
-	.setDescription(membertag + " has left the server")
+	guild.systemChannel.send(new Discord.RichEmbed()
+        .setColor("#8b00ff") 
+	.setDescription(membertag + " Покинул сервер")
 	.setThumbnail(member.user.displayAvatarURL)
 	.addField("Members now", member.guild.memberCount)
 	.setTimestamp()
