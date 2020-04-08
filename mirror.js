@@ -118,6 +118,7 @@ client.on("message", async message => {
       .addField("Server Info", "/server")
       .addField("Free Role", "/free")
       .addField("Avatar", "/avatar [member]")
+      .addField("Icon", "/icon")
       .addField("Say", "/say [message]")
       .addField("Embed", "/embed [message]")
       .addField("Kick", "/kick [member] [reason]")
