@@ -81,6 +81,13 @@ client.on('message', (message) => { //whenever a message is sent
 });
 
 
+client.on('message', message => {
+  if (message.content === '911') {
+    message.reply('Вызывает @『 Moderator 』');
+  }
+});
+
+
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
