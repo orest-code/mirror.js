@@ -169,7 +169,7 @@ client.on("message", async message => {
 
 
   //random number command
-    if(command === "random number") {
+    if(command === "random + number") {
     var random = Math.floor(Math.random() *100)+1;
     message.channel.send(random);
   }
