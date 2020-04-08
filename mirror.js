@@ -75,7 +75,7 @@ client.on('message', (message) => {
     if (message.author.id === arrayOfUsersIds[i]) return;
   };
     message.delete() //delete the message 
-      .then(message.channel.send("<@" + message.author.id + ">" + " Пожалуйста, не отправляйте приглашения в чат!"))
+      .then(message.channel.send("<@" + message.author.id + ">" + " **Пожалуйста, не отправляйте приглашения в чат!**"))
   }
 });
 
@@ -91,7 +91,7 @@ client.on('message', message => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-    message.channel.send('**Чтобы посмотреть список коммадн напишите  ``/help``**');
+    message.channel.send('**Чтобы посмотреть список коммадн используйте  ``/help``**');
   }
 }); 
 
@@ -111,19 +111,19 @@ client.on("message", async message => {
     if(command === "help") {
     let help = new Discord.RichEmbed()
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
-      .setDescription('List of bot commands:')
+      .setDescription('Список всех доступных комманд бота:')
       .setColor("#8b00ff") 
       .setThumbnail(message.guild.iconURL)
-      .addField("Server Info", "/server")
-      .addField("Free Role", "/free")
-      .addField("Avatar", "/avatar [member]")
-      .addField("Icon", "/icon")
-      .addField("Say", "/say [message]")
-      .addField("Embed", "/embed [message]")
-      .addField("Kick", "/kick [member] [reason]")
-      .addField("Ban", "/ban [member] [reason]")
-      .addField("Random number", "/ramdom") 
-      .addField("Ping", "/ping")
+      .addField("Информация о сервере", "/server")
+      .addField("Бесплатная роль", "/free")
+      .addField("Аватар учасника", "/avatar [member]")
+      .addField("Иконка сервера", "/icon")
+      .addField("Повторить", "/say [message]")
+      .addField("Повторить с embed", "/embed [message]")
+      .addField("Кик", "/kick [member] [reason]")
+      .addField("Бан", "/ban [member] [reason]")
+      .addField("Случайное число", "/ramdom") 
+      .addField("Пинг", "/ping")
       .setTimestamp()
     return message.channel.send(help);
   } 
@@ -134,13 +134,13 @@ client.on("message", async message => {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#8b00ff")
-      .addField("Name", message.guild.name)
-      .addField("Owner", "<@" + message.guild.owner.user.id + ">")
-      .addField("Region", message.guild.region)
-      .addField("Verification Level", message.guild.verificationLevel)
-      .addField("Members", message.guild.members.size)
-      .addField("Channels", message.guild.channels.size)
-      .addField("Roles", message.guild.roles.size)
+      .addField("Название", message.guild.name)
+      .addField("Владелец", "<@" + message.guild.owner.user.id + ">")
+      .addField("Регион", message.guild.region)
+      .addField("Уровень проверки", message.guild.verificationLevel)
+      .addField("Участников", message.guild.members.size)
+      .addField("Каналов", message.guild.channels.size)
+      .addField("Ролей", message.guild.roles.size)
       .setThumbnail(message.guild.iconURL)
       .setTimestamp()
     return message.channel.send(server);
@@ -152,7 +152,7 @@ client.on("message", async message => {
    var role = message.guild.roles.find(role => role.name === "『 Vip 』");
    message.member.addRole(role); 
    message.delete().catch(O_o=>{}); 
-   message.channel.send("**You got the role**  ``" + role.name + "``  ✓").then(function(message) {
+   message.channel.send("**Вы получили роль**  ``" + role.name + "``  ✓").then(function(message) {
     message.delete(3000);
   });
   }
@@ -168,7 +168,7 @@ client.on("message", async message => {
   //say command
     if(command === "say") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
-    return message.channel.send("Sorry, you do not have permission to use this command!").catch(console.error);
+    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
     }
       
     const sayMessage = args.join(" ");
@@ -180,13 +180,13 @@ client.on("message", async message => {
   //embed command
     if(command === "embed") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
-    return message.channel.send("Sorry, you do not have permission to use this command!").catch(console.error);
+    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
     }
     const embedMessage = args.join(" ");  
     const embed = new RichEmbed()  
        .setColor("#8b00ff") 
        .setTitle(embedMessage) 
-    message.delete().catch(O_o=>{}); 
+    message.delete().catch(O_o=>{});
     message.channel.send(embed) 
   } 
 
@@ -223,49 +223,49 @@ client.on("message", async message => {
   //kick command
     if(command === "kick") {
     if(!message.member.hasPermission("KICK_MEMBERS")){
-    return message.channel.send("Sorry, you do not have permission to use this command!").catch(console.error);
+    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
     }
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
-      return message.channel.send("Please indicate who you want to kick!");
+      return message.channel.send("Укажите пользователя которого хотите выгнать!");
     if(!member.kickable) 
-      return message.channel.send("You do not have enough rights to kick this user!");
+      return message.channel.send("Я не могу выгнать этого пользователя!");
     
     let reason = args.slice(1).join(' ');
-    if(!reason) reason = "No reason.";
+    if(!reason) reason = "Без причины";
     
     await member.kick(reason)
-      .catch(error => message.channel.send(`Sorry ${message.author} i can’t kick because: ${error}`));
-    message.channel.send(`${member.user.tag} was kicked by <@${message.author.id}> reason: ${reason}`);
+      .catch(error => message.channel.send(`Извините ${message.author} я не могу вызнать из-за: ${error}`));
+    message.channel.send(`${member.user.tag} был выгнан <@${message.author.id}> по причине: ${reason}`);
   }
   
   
   //ban command
     if(command === "ban") {
     if(!message.member.hasPermission("BAN_MEMBERS")){
-    return message.channel.send("Sorry, you do not have permission to use this command!").catch(console.error);
+    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
     }
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.channel.send("Please indicate who you want to ban!");
+      return message.channel.send("Укажите пользователя которого хотите заблокировать!");
     if(!member.bannable) 
-      return message.channel.send("You do not have sufficient rights to ban this user!");
+      return message.channel.send("Я не могу заблокировать этого пользователя!");
 
     let reason = args.slice(1).join(' ');
-    if(!reason) reason = "No reason.";
+    if(!reason) reason = "Без причины";
     
     await member.ban(reason)
-      .catch(error => message.channel.send(`Sorry ${message.author} i could not ban because: ${error}`));
-    message.channel.send(`${member.user.tag} was banned by <@${message.author.id}> reason: ${reason}`);
+      .catch(error => message.channel.send(`Извините ${message.author} я не могу заблокировать из-за: ${error}`));
+    message.channel.send(`${member.user.tag} был заблокирован <@${message.author.id}> по причине: ${reason}`);
   }
   
 
   //clear command
     if(command === "clear") {
     if(!message.member.hasPermission("MANAGE_MESSAGES")){
-    return message.channel.send("Sorry, you do not have permission to use this command!").catch(console.error);
+    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
     }
       
     const deleteCount = parseInt(args[0], 10);
@@ -275,6 +275,6 @@ client.on("message", async message => {
     
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
-      .catch(error => message.channel.send(`Failed to delete messages due to:: ${error}`));
+      .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`));
   }
-}); 
+});
