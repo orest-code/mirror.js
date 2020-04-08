@@ -87,6 +87,7 @@ client.on('message', message => {
       .setAuthor(message.author.user.username, message.author.user.displayAvatarURL)
       .setDescription('Вызывает <@&618128028748349450>')
       .setColor("#8b00ff") 
+      .setTimestamp()
     message.reply('Вызывает <@&618128028748349450>');
   }
 }); 
