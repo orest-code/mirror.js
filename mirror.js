@@ -83,12 +83,12 @@ client.on('message', (message) => {
 //moderator mention
 client.on('message', message => {
   if (message.content === '911') {
-    let help = new Discord.RichEmbed()
+    let mod = new Discord.RichEmbed()
       .setAuthor(message.author.user.username, message.author.user.displayAvatarURL)
       .setDescription('Вызывает <@&618128028748349450>')
       .setColor("#8b00ff") 
       .setTimestamp()
-    message.reply('Вызывает <@&618128028748349450>');
+    message.channel.send(mod);
   }
 }); 
 
