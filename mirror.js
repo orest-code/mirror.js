@@ -41,7 +41,6 @@ if(guild.systemChannel){
         .setColor("#8b00ff") 
 	.setDescription("<@" + memberid + ">" + " Присоединился к серверу")
 	.setThumbnail(member.user.displayAvatarURL)
-	.addField("Members now", member.guild.memberCount)
 	.setTimestamp()
 	);
 }
@@ -57,7 +56,6 @@ if(guild.systemChannel){
         .setColor("#8b00ff") 
 	.setDescription(membertag + " Покинул сервер")
 	.setThumbnail(member.user.displayAvatarURL)
-	.addField("Members now", member.guild.memberCount)
 	.setTimestamp()
 	);
 }
