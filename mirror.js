@@ -84,11 +84,10 @@ client.on('message', (message) => {
 client.on('message', message => {
   if (message.content === '911') {
     let mod = new Discord.RichEmbed()
-      .setAuthor(message.author.user.username, message.author.user.displayAvatarURL)
       .setDescription('Вызывает <@&618128028748349450>')
       .setColor("#8b00ff") 
       .setTimestamp()
-    message.channel.send(mod);
+   return message.channel.send(mod);
   }
 }); 
 
