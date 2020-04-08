@@ -68,7 +68,7 @@ if(guild.systemChannel){
 
 
 //discord invites
-client.on('message', (message) => { //whenever a message is sent
+client.on('message', (message) => { 
   if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link 
     const arrayOfUsersIds = ['595030276804050945', '472320129514864651'];
 
@@ -91,6 +91,14 @@ client.on('message', message => {
     return message.channel.send(mod);
   }
 });
+
+
+//moderator mention
+client.on('message', message => {
+  if (message.content === '911') {
+    message.reply('Вызывает <@&618128028748349450>');
+  }
+}); 
 
 
 //bot mention
