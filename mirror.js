@@ -81,10 +81,11 @@ client.on('message', (message) => { //whenever a message is sent
 });
 
 
-client.on('message', message => {
-  if (message.content === '911') {
-    message.reply('Вызывает @『 Moderator 』');
-  }
+client.on("message", message => {
+    if(message.content == "911") {
+        var mention = msg.channel.server.roles.get('『 Moderator 』');
+    message.reply("Вызывает" + ention.mention() + "🆘")
+    }
 });
 
 
