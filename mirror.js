@@ -85,7 +85,7 @@ client.on('message', message => {
   if (message.content === '911') {
     let mod = new Discord.RichEmbed()
       .setDescription(message.author.user.username)
-      .setThumbnail(message.author.user.displayAvatarURL))
+      .setThumbnail(message.author.user.displayAvatarURL)
       .setColor("#8b00ff")
       .addField("Вызывает <@&618128028748349450>")
       .setTimestamp()
