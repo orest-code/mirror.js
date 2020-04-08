@@ -127,7 +127,7 @@ client.on("message", async message => {
       .addField("Embed", "/embed [message]")
       .addField("Kick", "/kick [member] [reason]")
       .addField("Ban", "/ban [member] [reason]")
-      .addField("Random", "/ramdom") 
+      .addField("Random number", "/ramdom") 
       .addField("Ping", "/ping")
       .setTimestamp()
     return message.channel.send(help);
@@ -162,14 +162,9 @@ client.on("message", async message => {
   });
   }
 
-  //random
-    if(command === "random") {
-    message.channel.send(User: /random number);
-  }
-
 
   //random number command
-    if(command === "random + number") {
+    if(command === "random") {
     var random = Math.floor(Math.random() *100)+1;
     message.channel.send(random);
   }
