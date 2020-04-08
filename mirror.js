@@ -191,6 +191,15 @@ client.on("message", async message => {
   } 
 
 
+ //server icon
+   if(command === "icon") {
+    const embed = new Discord.RichEmbed()
+                   .setImage(message.guild.iconURL)
+                   .setColor(0x8b00ff)
+    message.channel.send(embed);
+  }
+
+
   //avatar command
     if(command === "avatar") {
        let user = message.mentions.users.first();
