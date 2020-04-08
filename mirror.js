@@ -224,7 +224,7 @@ client.on("message", async message => {
     
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
-      return message.channel.send("Используйте: /kick [учасник] [причина]");
+      return message.channel.send("Укажите пользователя которого хотите выгнать");
     if(!member.kickable) 
       return message.channel.send("Я не могу выгнать этого пользователя!");
     
@@ -245,7 +245,7 @@ client.on("message", async message => {
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.channel.send("Используйте: /ban [учасник] [причина]");
+      return message.channel.send("Укажите пользователя которого хотите заблокировать!");
     if(!member.bannable) 
       return message.channel.send("Я не могу заблокировать этого пользователя!");
 
