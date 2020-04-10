@@ -32,19 +32,15 @@ client.on("ready", () => {
   });
 });
 
+
 //welcome message
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
   let memberid = member.user.id;
-  let facts = ["just joined the server - glhf!", "just joined. Everyone, look busy!", "just joined. Can I get a heal?"];
+  let facts = ["Приветствую тебя 🤗", "Приветик, как делишки?", "Надеюсь вам понравится наш сервер 😊"];
   let fact = Math.floor(Math.random() * facts.length);
   if (guild.systemChannel) {
-    guild.systemChannel.send(new Discord.RichEmbed()
-      .setColor("#8b00ff")
-      .setDescription("<@" + memberid + "> " + facts[fact])
-      .setThumbnail(member.user.displayAvatarURL)
-      .setTimestamp()
-    );
+    guild.systemChannel.send("<@" + memberid + "> " + facts[fact])
   }
 });
 
