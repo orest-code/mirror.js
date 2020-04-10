@@ -38,7 +38,6 @@ client.on("guildMemberAdd", (member) => {
   let memberid = member.user.id;
   let facts = ["just joined the server - glhf!", "just joined. Everyone, look busy!", "just joined. Can I get a heal?"];
   let fact = Math.floor(Math.random() * facts.length);
-  message.channel.send(facts[fact]);
   if (guild.systemChannel) {
     guild.systemChannel.send(new Discord.RichEmbed()
       .setColor("#8b00ff")
