@@ -36,8 +36,8 @@ client.on("ready", () => {
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
   let memberid = member.user.id;
-  var facts = ["just joined the server - glhf!", "just joined. Everyone, look busy!", "just joined. Can I get a heal?"];
-  var fact = Math.floor(Math.random() * facts.length);
+  let facts = ["just joined the server - glhf!", "just joined. Everyone, look busy!", "just joined. Can I get a heal?"];
+  let fact = Math.floor(Math.random() * facts.length);
   message.channel.send(facts[fact]);
   if (guild.systemChannel) {
     guild.systemChannel.send(new Discord.RichEmbed()
