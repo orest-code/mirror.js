@@ -34,16 +34,19 @@ client.on("ready", () => {
 
 //welcome message
 client.on("guildMemberAdd", (member) => {
-let guild = member.guild; 
-let memberid = member.user.id;
-if(guild.systemChannel){
-	guild.systemChannel.send(new Discord.RichEmbed()
-        .setColor("#8b00ff") 
-	.setDescription("<@" + memberid + ">" + " Присоединился к серверу")
-	.setThumbnail(member.user.displayAvatarURL)
-	.setTimestamp()
-	);
-}
+  let guild = member.guild;
+  let memberid = member.user.id;
+  var facts = ["just joined the server - glhf!", "just joined. Everyone, look busy!", "just joined. Can I get a heal?"];
+  var fact = Math.floor(Math.random() * facts.length);
+  message.channel.send(facts[fact]);
+  if (guild.systemChannel) {
+    guild.systemChannel.send(new Discord.RichEmbed()
+      .setColor("#8b00ff")
+      .setDescription("<@" + memberid + "> " + facts[fact])
+      .setThumbnail(member.user.displayAvatarURL)
+      .setTimestamp()
+    );
+  }
 });
 
 
