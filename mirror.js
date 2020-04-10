@@ -37,26 +37,23 @@ client.on("ready", () => {
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
   let memberid = member.user.id;
-  let facts = ["Приветствую тебя 🤗", "Приветик, как делишки?", "Надеюсь вам понравится наш сервер 😊"];
+  let facts = [" **Приветик! Я рад вас здесь видеть ❤️**", " **Приветик! Я рад что вы зашли на наш сервер ❤️**", " **Приветик! Надеюсь вам понравится наш сервер ❤️**"];
   let fact = Math.floor(Math.random() * facts.length);
   if (guild.systemChannel) {
-    guild.systemChannel.send("<@" + memberid + "> " + facts[fact])
+    guild.systemChannel.send("<@" + memberid + ">" + facts[fact])
   }
 });
 
 
 //leave message
 client.on("guildMemberRemove", (member) => {
-let guild = member.guild; 
-let membertag = member.user.tag;
-if(guild.systemChannel){
-	guild.systemChannel.send(new Discord.RichEmbed()
-        .setColor("#8b00ff") 
-	.setDescription(membertag + " Покинул сервер")
-	.setThumbnail(member.user.displayAvatarURL)
-	.setTimestamp()
-	);
-}
+  let guild = member.guild; 
+  let membertag = member.user.tag;
+  let facts = [" **Надеюсь мы ещё увидимся 💔**", " **Покинул сервер 💔**", " **Мы всегда рады если ты захочешь вернуться 💔**"];
+  let fact = Math.floor(Math.random() * facts.length);
+  if(guild.systemChannel){
+    guild.systemChannel.send(membertag + facts[fact]);
+  }
 });
 
 
