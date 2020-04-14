@@ -34,13 +34,6 @@ client.on("ready", () => {
 });
 
 
-//loadmessages
-client.on('ready', async () => {
-	console.log('Successfully logged in Discord!');
-	await database.load('./database.json')
-});
-
-
 //welcome message
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
