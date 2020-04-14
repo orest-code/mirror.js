@@ -1,1 +1,1 @@
-MIRROR BOT [JavaScript]
+MIRROR BOT By Orest
