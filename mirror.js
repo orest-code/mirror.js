@@ -146,6 +146,14 @@ client.on("message", async message => {
 }
 
 
+    if(command === "prefix") {
+	if (args[0]) {
+		database.getGuildData(msg.guild).prefix = args[0];
+		await msg.channel.send(`Новый префикс для команд: '${args[0]}'`);
+	}
+}
+    
+
   //free command
    if(command === "free") {
    var role = message.guild.roles.find(role => role.name === "『 Vip 』");
