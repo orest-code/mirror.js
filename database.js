@@ -9,10 +9,3 @@ const getGuildData = (guild) => {
 	}
 	return guilds[guild.id];
 }
-
-module.exports = {
-	load: load,
-	save: save,
-	getGuildData: getGuildData,
-	getAccount: getAccount
-}
