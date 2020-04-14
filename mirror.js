@@ -134,17 +134,6 @@ client.on("message", async message => {
     return message.channel.send(server);
 }
 
-  //prefix
-    if (command === "prefix") {
-	guildConf[message.guild.id].prefix = args[0];
-	if (!guildConf[message.guild.id].prefix) {
-		guildConf[message.guild.id].prefix = config.prefix; // If you didn't specify a Prefix, set the Prefix to the Default Prefix
-	}
-     fs.writeFile('./guildConf.json', JSON.stringify(guildConf, null, 2), (err) => {
-     	if (err) console.log(err)
-	})
-  }
-    
 
   //free command
    if(command === "free") {
