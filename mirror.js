@@ -5,9 +5,6 @@ const config = require('./config.json');
 const ms = require("ms");
 const database = require('./database');
 const fs = require('fs');
-const utils = require('./utils');
-
-const commands = {};
 
 
 client.login(process.env.MIRROR);
