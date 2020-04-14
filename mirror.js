@@ -2,8 +2,12 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js'); 
 const config = require('./config.json');
-const fs = require("fs");
 const ms = require("ms");
+const database = require('./database');
+const fs = require('fs');
+const utils = require('./utils');
+
+const commands = {};
 
 
 client.login(process.env.MIRROR);
@@ -30,6 +34,14 @@ client.on("ready", () => {
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
     }
   });
+});
+
+
+//loadmessages
+client.on('ready', async () => {
+	console.log('Successfully logged in Discord!');
+	await database.load('./database.json');
+	await loadCommands('./commands');
 });
 
 
