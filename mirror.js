@@ -88,6 +88,27 @@ client.on('message', message => {
 }); 
 
 
+//lol
+bot.on('guildCreate', (guild) => { // If the Bot was added on a server, proceed
+    if (!guildConf[guild.id]) { // If the guild's id is not on the GUILDCONF File, proceed
+	guildConf[guild.id] = {
+		prefix: config.prefix
+	}
+    }
+     fs.writeFile('./storages/guildConf.json', JSON.stringify(guildConf, null, 2), (err) => {
+     	if (err) console.log(err)
+	})
+});
+
+
+bot.on('guildDelete', (guild) => { // If the Bot was removed on a server, proceed
+     delete guildConf[guild.id]; // Deletes the Guild ID and Prefix
+     fs.writeFile('./storages/guildConf.json', JSON.stringify(guildConf, null, 2), (err) => {
+     	if (err) console.log(err)
+	})
+});
+
+
 //commands
 client.on('message', (message) => {
     if (message.channel.type === "dm" || message.author.bot || message.author === bot.user) return; // Checks if we're on DMs, or the Author is a Bot, or the Author is our Bot, stop.
