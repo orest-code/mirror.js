@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js'); 
 const config = require('./config.json');
 const ms = require("ms");
-const database = require('./database');
+var guildConf = require('./guildConf.json');
 const fs = require('fs');
 
 
