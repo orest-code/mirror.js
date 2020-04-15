@@ -87,22 +87,6 @@ client.on('message', message => {
 }); 
 
 
-
-client.on("message", message => {
-        
-          if (message.content.startsWith('mods')) {
-            message.mentions.members.first().addRole('618128028748349450');                 
-          }
-        
-          if (message.content == 'mods') {
-            const ListEmbed = new Discord.RichEmbed()
-              .setTitle('Users with the mod role:')
-              .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
-            message.channel.send(ListEmbed);
-          }
-        });
-
-
 //commands
 client.on("message", async message => {  
   if(message.author.bot) return; 
@@ -131,6 +115,14 @@ client.on("message", async message => {
       .setTimestamp()
     return message.channel.send(help);
   } 
+
+  //test
+    if (command === "mods") {
+              const ListEmbed = new Discord.RichEmbed()
+                .setTitle('Users with the mod role:')
+                .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
+              message.channel.send(ListEmbed);
+            }
 
 
   //server info
