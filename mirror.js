@@ -101,16 +101,17 @@ client.on("message", async message => {
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
       .setDescription('Список всех доступных комманд бота:')
       .setColor("#8b00ff")
+      .addField("Информация:")
       .addField("Информация о сервере", "/server")
-      .addField("Бесплатная роль", "/free")
       .addField("Аватар учасника", "/avatar [учасник]")
       .addField("Иконка сервера", "/icon")
-      .addField("Повторить", "/say [сообщение]")
-      .addField("Повторить с embed", "/embed [сообщение]")
+      .addField("Модератор:")
       .addField("Выгнать", "/kick [учасник] [причина]")
       .addField("Заблокировать", "/ban [учасник] [причина]")
+      .addField("Повторить", "/say [сообщение]")
+      .addField("Повторить с embed", "/embed [сообщение]")
+      .addField("Другие")
       .addField("Случайное число", "/ramdom")
-      .addField("Список модеров", "/moderators") 
       .addField("Пинг", "/ping")
       .setTimestamp()
     return message.channel.send(help);
@@ -133,18 +134,6 @@ client.on("message", async message => {
       .setTimestamp()
     return message.channel.send(server);
 }
-
-
-  //members list
-    if (command === "members") {
-            const serverroles = args.join(" ")
-            const members = new Discord.RichEmbed()
-            return message.channel.send("lll")
-                .setColor("#8b00ff")
-                .setTitle("Список участников с ролью" + serverroles)
-                .setDescription(message.guild.roles.find(role => role.name === serverroles).members.map(m => m.user.tag).join('\n'));
-            message.channel.send(members);
-           }
 
 
   //free command
