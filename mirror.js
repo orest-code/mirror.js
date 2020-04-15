@@ -137,6 +137,7 @@ client.on("message", async message => {
 
     if (command === "members") {
             const serverroles = args.join(" "); 
+            return message.channel.send("Укажите роль!")
               const members = new Discord.RichEmbed()
                 .setColor("#8b00ff")
                 .setTitle('Список модераторов сервера:')
@@ -153,7 +154,6 @@ client.on("message", async message => {
                 .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
               message.channel.send(moderators);
             }
-
 
   //free command
    if(command === "free") {
