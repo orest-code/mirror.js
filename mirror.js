@@ -116,14 +116,6 @@ client.on("message", async message => {
     return message.channel.send(help);
   } 
 
-  //moderators list
-    if (command === "moderators") {
-              const moderators = new Discord.RichEmbed()
-                .setTitle('Server Moderators:')
-                .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
-              message.channel.send(moderators);
-            }
-
 
   //server info
     if(command === "server") {
@@ -141,6 +133,15 @@ client.on("message", async message => {
       .setTimestamp()
     return message.channel.send(server);
 }
+
+
+  //moderators list
+    if (command === "moderators") {
+              const moderators = new Discord.RichEmbed()
+                .setTitle('Server Moderators:')
+                .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
+              message.channel.send(moderators);
+            }
 
 
   //free command
