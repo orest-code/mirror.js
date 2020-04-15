@@ -135,13 +135,13 @@ client.on("message", async message => {
 }
 
 
-    if (command === "hmm") {
-            const serverroles = args.join(" ");
-              const lolo = new Discord.RichEmbed()
+    if (command === "members") {
+            const serverroles = args.join(" "); 
+              const members = new Discord.RichEmbed()
                 .setColor("#8b00ff")
                 .setTitle('Список модераторов сервера:')
                 .setDescription(message.guild.roles.find(role => role.name === serverroles).members.map(m => m.user.tag).join('\n'));
-              message.channel.send(lolo);
+              message.channel.send(members);
             }
 
 
