@@ -137,14 +137,14 @@ client.on("message", async message => {
 
   //members list
     if (command === "members") {
+            return message.channel.send("...")
             const serverroles = args.join(" ")
-              return message.channel.send("...")
-              const members = new Discord.RichEmbed()
+            const members = new Discord.RichEmbed()
                 .setColor("#8b00ff")
                 .setTitle("Список участников с ролью" + serverroles)
                 .setDescription(message.guild.roles.find(role => role.name === serverroles).members.map(m => m.user.tag).join('\n'));
-              return message.channel.send(members);
-            }
+            return message.channel.send(members);
+           }
 
 
   //free command
