@@ -123,7 +123,7 @@ client.on("message", async message => {
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#8b00ff")
       .addField("Название", message.guild.name)
-      .addField("Владелец", "<@" + message.guild.owner.user.id + ">")
+      .addField("Владелец", message.guild.owner.user.tag)
       .addField("Регион", message.guild.region)
       .addField("Уровень проверки", message.guild.verificationLevel)
       .addField("Участников", message.guild.members.size)
