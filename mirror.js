@@ -148,7 +148,7 @@ client.on("message", async message => {
 
 
   //server info1111111
-    if(command === "lol lod") {
+    if(command === "lol" + "loo") {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#8b00ff")
