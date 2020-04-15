@@ -89,7 +89,7 @@ client.on('message', message => {
 //moderator mention
 client.on('message', message => {
   if (message.content === '911') {
-   message.channel.send("<@" + message.author.id + ">" + " **Вызывает**" + " <@&618128028748349450>");
+   message.channel.send("<@" + message.author.id + ">" + " вызывает " + "<@&618128028748349450>");
   }
 }); 
 
