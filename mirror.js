@@ -116,12 +116,12 @@ client.on("message", async message => {
     return message.channel.send(help);
   } 
 
-  //test
-    if (command === "mods") {
-              const ListEmbed = new Discord.RichEmbed()
-                .setTitle('Users with the mod role:')
+  //moderators list
+    if (command === "moderators") {
+              const moderators = new Discord.RichEmbed()
+                .setTitle('Server Moderators:')
                 .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
-              message.channel.send(ListEmbed);
+              message.channel.send(moderators);
             }
 
 
