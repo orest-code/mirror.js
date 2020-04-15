@@ -137,8 +137,9 @@ client.on("message", async message => {
 
   //members list
     if (command === "members") {
-            const serverroles = args.join(" ");
+            const serverroles = args.join(" ");{
             return message.channel.send("Укажите роль")
+            }
               const members = new Discord.RichEmbed()
                 .setColor("#8b00ff")
                 .setTitle("Список участников с ролью" + serverroles)
