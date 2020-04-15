@@ -57,6 +57,13 @@ client.on("guildMemberRemove", (member) => {
 });
 
 
+//nitro booster message
+client.on('nitroBoost', (booster) => {
+   bot.channels.get('604372242763350057').send(`${booster} пробустил сервер!`)
+   booster.addRole(booster.guild.roles.find(a => a.name === '『 Nitro Booster 』'))
+})
+
+
 //discord invites
 client.on('message', (message) => { 
   if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link 
