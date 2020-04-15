@@ -110,7 +110,7 @@ client.on("message", async message => {
       .addField("Выгнать", "/kick [учасник] [причина]")
       .addField("Заблокировать", "/ban [учасник] [причина]")
       .addField("Случайное число", "/ramdom")
-      .addField("Список модераторо", "/moderators") 
+      .addField("Список модеров", "/moderators") 
       .addField("Пинг", "/ping")
       .setTimestamp()
     return message.channel.send(help);
