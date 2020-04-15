@@ -137,7 +137,6 @@ client.on("message", async message => {
 
   //members list
     if (command === "members") {
-            return message.channel.send("...")
             const serverroles = args.join(" ")
             const members = new Discord.RichEmbed()
                 .setColor("#8b00ff")
