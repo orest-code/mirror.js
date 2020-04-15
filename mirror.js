@@ -143,7 +143,8 @@ client.on("message", async message => {
                 .setColor("#8b00ff")
                 .setTitle("Список участников с ролью" + serverroles)
                 .setDescription(message.guild.roles.find(role => role.name === serverroles).members.map(m => m.user.tag).join('\n'));
-            return message.channel.send(members);
+            message.channel.send(members);
+           return message.channel.send("...")
            }
 
 
