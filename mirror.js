@@ -112,6 +112,7 @@ client.on("message", async message => {
       .addField("Повторить с embed", "/embed [сообщение]")
       .addField("Другие")
       .addField("Случайное число", "/ramdom")
+      .addField("Бесплатная роль", "/free")
       .addField("Пинг", "/ping")
       .setTimestamp()
     return message.channel.send(help);
