@@ -139,7 +139,7 @@ client.on("message", async message => {
             const serverroles = args.join(" "); 
               const members = new Discord.RichEmbed()
                 .setColor("#8b00ff")
-                .setTitle("Список участников с ролью" + role.name)
+                .setTitle("Список участников с ролью" + serverroles)
                 .setDescription(message.guild.roles.find(role => role.name === serverroles).members.map(m => m.user.tag).join('\n'));
               message.channel.send(members);
             }
