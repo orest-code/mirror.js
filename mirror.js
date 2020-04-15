@@ -135,13 +135,13 @@ client.on("message", async message => {
 }
 
 
-//owners list
-    if (command === "owners") {
-              const moderators = new Discord.RichEmbed()
+    if (command === "hmm") {
+            const serverroles = args.join(" ");
+              const lolo = new Discord.RichEmbed()
                 .setColor("#8b00ff")
-                .setTitle('Список владельцев сервера:')
-                .setDescription(message.guild.roles.get('527027574212395018').members.map(m => m.user.tag).join('\n'));
-              message.channel.send(moderators);
+                .setTitle('Список модераторов сервера:')
+                .setDescription(message.guild.roles.find(role => role.name === serverroles).members.map(m => m.user.tag).join('\n'));
+              message.channel.send(lolo);
             }
 
 
