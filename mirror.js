@@ -37,8 +37,6 @@ client.on("ready", () => {
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
   let memberid = member.user.id;
-  let welcomerole = message.guild.roles.find(role => role.name === "Moderators");
-  guild.member.addRole(welcomerole); 
   let facts = [" **Приветик! Я рад вас здесь видеть ❤️**", " **Приветик! Я рад что вы зашли на наш сервер ❤️**", " **Приветик! Надеюсь вам понравится наш сервер ❤️**"];
   let fact = Math.floor(Math.random() * facts.length);
   if (guild.systemChannel) {
