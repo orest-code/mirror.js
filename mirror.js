@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js'); 
-const config = require('./config.json');
 const ms = require("ms");
 const fs = require('fs');
 
