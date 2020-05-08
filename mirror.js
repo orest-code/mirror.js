@@ -1,8 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js'); 
+const ytdl = require("ytdl-core");
 const ms = require("ms");
 const fs = require('fs');
+const queue = new Map();
 
 
 client.login(process.env.MIRROR);
