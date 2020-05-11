@@ -85,6 +85,15 @@ client.on('message', message => {
 }); 
 
 
+//test
+client.on('message', message => {
+  if (message.content === '/') {
+   const test = args.join(" ");
+   message.channel.send("**Чтобы посмотреть список комманд используйте:  ``/help``**");
+  }
+}); 
+
+
 //moderator mention
 client.on('message', message => {
   if (message.content === '911') {
@@ -156,16 +165,6 @@ client.on("message", async message => {
    const mods = new Discord.RichEmbed()
           .setColor("#8b00ff")
           .setTitle('Список модераторов сервера:')
-          .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
-   message.channel.send(mods);
-}
-
-
-  //test
-   if (command === "") {
-   const mods = new Discord.RichEmbed()
-          .setColor("#8b00ff")
-          .setTitle('lol:')
           .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
    message.channel.send(mods);
 }
