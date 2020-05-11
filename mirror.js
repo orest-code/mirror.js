@@ -161,6 +161,16 @@ client.on("message", async message => {
 }
 
 
+  //test
+   if (command === "") {
+   const mods = new Discord.RichEmbed()
+          .setColor("#8b00ff")
+          .setTitle('lol:')
+          .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
+   message.channel.send(mods);
+}
+
+
   //free command
    if(command === "free") {
    let frees = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
