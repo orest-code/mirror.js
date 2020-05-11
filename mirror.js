@@ -165,8 +165,9 @@ client.on("message", async message => {
 
   //random number command
     if(command === "random") {
+    const lol = args.join(" ");
     var random = Math.floor(Math.random() *100)+1;
-    message.channel.send(random + " <:ogur4ik:593746675722485760>");
+    message.channel.send(random + lol);
   }
 
 
