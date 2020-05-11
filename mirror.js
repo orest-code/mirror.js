@@ -93,14 +93,6 @@ client.on('message', message => {
 });
 
 
-//test
-client.on('message', message => {
-  if (message.content === 'process.env.PREFIX'') {
-  message.channel.send("lol");
-  }
-});
-
-
 //commands
 client.on("message", async message => {  
   if(message.author.bot) return; 
