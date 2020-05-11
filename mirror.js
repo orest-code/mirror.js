@@ -109,6 +109,7 @@ client.on("message", async message => {
       .setColor("#8b00ff")
       .addField("Информация о сервере", "/server")
       .addField("Аватар учасника", "/avatar [учасник]")
+      .addField("Модераторы сервера", "/moderators")
       .addField("Иконка сервера", "/icon")
       .addField("Выгнать", "/kick [учасник] [причина]")
       .addField("Заблокировать", "/ban [учасник] [причина]")
