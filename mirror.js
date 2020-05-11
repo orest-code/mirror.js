@@ -89,7 +89,7 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content === '/') {
    const test = args.join(" ");
-   message.channel.send("**Чтобы посмотреть список комманд используйте:  ``/help``**");
+   message.channel.send("Комманды" + test + "не существует, используйте: /help");
   }
 }); 
 
