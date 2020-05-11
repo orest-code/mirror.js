@@ -85,15 +85,6 @@ client.on('message', message => {
 }); 
 
 
-//test
-client.on('message', message => {
-  if (message.content === '/') {
-   const test = args.join(" ");
-   message.channel.send("Комманды" + test + "не существует, используйте: /help");
-  }
-}); 
-
-
 //moderator mention
 client.on('message', message => {
   if (message.content === '911') {
