@@ -162,9 +162,12 @@ client.on("message", async message => {
 
 
   if (command === "free") {
-   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"]; 
-   message.member.removeRole(freerole);
-   let randomrole = Math.floor(Math.random() * free.length); 
+   let rrole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
+   var removerole = message.guild.roles.find(role => role.name === rrole);
+   message.member.removeRole(removerole);
+  }
+   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"]; {
+   let randomrole = Math.floor(Math.random() * freerole.length); 
    var giverole = message.guild.roles.find(role => role.name === freerole[randomrole]);
    message.member.addRole(giverole);
    message.channel.send("**Вы получили роль** ``" + freerole[randomrole] + " **✓**").then(function(message) {
