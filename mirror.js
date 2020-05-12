@@ -163,8 +163,9 @@ client.on("message", async message => {
 
   if (command === "free") {
    var rrole = message.guild.roles.find(role => role.name === ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"]);
-   message.member.removeRole(rrole);
-   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
+   message.member.removeRole(rrole); return;
+  }
+   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"]; {
    let randomrole = Math.floor(Math.random() * freerole.length); 
    var giverole = message.guild.roles.find(role => role.name === freerole[randomrole]);
    message.member.addRole(giverole);
