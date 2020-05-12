@@ -161,19 +161,16 @@ client.on("message", async message => {
 }
 
 
-  //free command
-   if(command === "free") {
-   let frees = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
-   let free = Math.floor(Math.random() * frees.length);
-   var role = message.guild.roles.find(role => role.name === frees[free]);
-   var removerole = message.guild.roles.get('699948039632191529', '699948139531993138', '699947322792083516');
-   message.member.removeRole(removerole)
-   message.member.addRole(role); 
-   message.delete().catch(O_o=>{}); 
-   message.channel.send("**Вы получили роль**  ``" + frees[free] + "``  ✓").then(function(message) {
+  if (command === "free") {
+   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"]; 
+   message.member.removeRole(freerole);
+   let randomrole = Math.floor(Math.random() * free.length);
+   var giverole = message.guild.roles.find(role => role.name === freerole[randomrole]);
+   message.member.addRole(giverole);
+   message.channel.send("**Вы получили роль** ``" + giverole + " **✓**").then(function(message) {
     message.delete(3000);
-  });
-  }
+   });
+   }
 
 
   //random number command
