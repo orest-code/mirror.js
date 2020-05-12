@@ -166,7 +166,8 @@ client.on("message", async message => {
    let frees = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
    let free = Math.floor(Math.random() * frees.length);
    var role = message.guild.roles.find(role => role.name === frees[free]);
-   message.member.removeRole(frees)
+   var removerole = message.guild.roles.find(role => role.name === frees);
+   message.member.removeRole(removerole)
    message.member.addRole(role); 
    message.delete().catch(O_o=>{}); 
    message.channel.send("**Вы получили роль**  ``" + frees[free] + "``  ✓").then(function(message) {
