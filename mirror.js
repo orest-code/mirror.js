@@ -166,7 +166,7 @@ client.on("message", async message => {
    let frees = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
    let free = Math.floor(Math.random() * frees.length);
    var role = message.guild.roles.find(role => role.name === frees[free]);
-   var removerole = message.guild.roles.find(role => role.name === frees);
+   var removerole = message.guild.roles.get('699948039632191529', '699948139531993138', '699947322792083516');
    message.member.removeRole(removerole)
    message.member.addRole(role); 
    message.delete().catch(O_o=>{}); 
