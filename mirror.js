@@ -170,6 +170,10 @@ client.on("message", async message => {
    message.delete().catch(O_o=>{});
    message.channel.send("**Вы получили роль** ``" + freerole[randomrole] + "`` **✓**").then(function(message) {
     message.delete(3000);
+      talkedRecently.add(message.author.id);
+      setTimeout(() => {
+       talkedRecently.delete(message.author.id);
+      }, 20000);
    });
    }
 
