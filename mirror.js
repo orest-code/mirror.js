@@ -93,6 +93,20 @@ client.on('message', message => {
 });
 
 
+client.on("message", (message) => {
+      if (talkedRecently.has(message.author.id)) {
+       message.channel.send("Cooldown 20 sec");
+       message.delete();
+       return;
+      }
+   
+      talkedRecently.add(message.author.id);
+      setTimeout(() => {
+       talkedRecently.delete(message.author.id);
+      }, 20000);
+   });
+
+
 //commands
 client.on("message", async message => {  
   if(message.author.bot) return; 
