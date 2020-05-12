@@ -32,15 +32,6 @@ client.on("ready", () => {
 });
 
 
-//prefixes
-client.on('message', async message => {
-  const prefixes = ['!', '\\?', '\\/', `<@!?${client.user.id}> `];
-  const prefixRegex = new RegExp(`^(${prefixes.join('|')})`);
-  const prefix = message.content.match(prefixRegex);
-
-  // Go ahead with the rest of your code!
-});
-
 //welcome message
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
@@ -105,8 +96,8 @@ client.on('message', message => {
 //commands
 client.on("message", async message => {  
   if(message.author.bot) return; 
-  if(message.content.indexOf(prefixRegex) !== 0) return; 
-  const args = message.content.slice(prefixRegex.length).trim().split(/ +/g);
+  if(message.content.indexOf(process.env.PREFIX) !== 0) return; 
+  const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
 
