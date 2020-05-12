@@ -175,18 +175,17 @@ client.on("message", async message => {
 }
 
 
+//free role
   if (command === "free") {
-   var rrole = message.guild.roles.find(role => role.name === ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"]);
-   message.member.removeRole(rrole); return;
-  }
-   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"]; {
+   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
    let randomrole = Math.floor(Math.random() * freerole.length); 
-   var giverole = message.guild.roles.find(role => role.name === freerole[randomrole]);
+   var giverole = message.guild.roles.find(role => role.name === freerole[randomrole]); 
    message.member.addRole(giverole);
+   message.delete().catch(O_o=>{});
    message.channel.send("**Вы получили роль** ``" + freerole[randomrole] + "`` **✓**").then(function(message) {
     message.delete(3000);
    });
-   } 
+   }
 
 
   //random number command
