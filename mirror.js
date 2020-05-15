@@ -24,7 +24,7 @@ client.on("ready", () => {
   client.user.setPresence({
     game: {
       name: "/help",
-      type: "STREAMING",
+      type: "WATCHING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
     }
