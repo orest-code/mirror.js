@@ -50,7 +50,7 @@ client.on("guildMemberRemove", (member) => {
   let leftmsg = new Discord.RichEmbed()
   let guild = member.guild; 
   let membertag = member.user.tag;
-      .setColor("#FE2E2E");
+      .setColor("#fe2e2e");
       .setDescription(membertag + " Left the server!");
   if(guild.systemChannel){
     guild.systemChannel.send(leftmsg);
