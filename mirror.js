@@ -86,7 +86,7 @@ client.on("message", async message => {
     if(command === "help") {
     let help = new Discord.RichEmbed()
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
-      .setDescription('Список всех доступных комманд бота:')
+      .setDescription('Command list:')
       .setColor("#8b00ff")
       .addField("Server info", "/server")
       .addField("Server icon", "/icon")
