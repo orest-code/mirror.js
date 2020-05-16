@@ -35,11 +35,9 @@ client.on("ready", () => {
 //welcome message
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
-  let memberid = member.user.id;
-  let facts = [" **Приветик! Я рад вас здесь видеть ❤️**", " **Приветик! Я рад что вы зашли на наш сервер ❤️**", " **Приветик! Надеюсь вам понравится наш сервер ❤️**"];
-  let fact = Math.floor(Math.random() * facts.length);
+  let membertag = member.user.tag;
   if (guild.systemChannel) {
-    guild.systemChannel.send("<@" + memberid + ">" + facts[fact])
+    guild.systemChannel.send("<@" + membertag + "> joined the server!");
   }
 });
 
@@ -48,19 +46,10 @@ client.on("guildMemberAdd", (member) => {
 client.on("guildMemberRemove", (member) => {
   let guild = member.guild; 
   let membertag = member.user.tag;
-  let facts = [" **Надеюсь мы ещё увидимся 💔**", " **Покинул сервер 💔**", " **Мы всегда рады если ты захочешь вернуться 💔**"];
-  let fact = Math.floor(Math.random() * facts.length);
   if(guild.systemChannel){
-    guild.systemChannel.send(membertag + facts[fact]);
+    guild.systemChannel.send(membertag + " Left the server!);
   }
 });
-
-
-//nitro booster message
-client.on('nitroBoost', (booster) => {
-   bot.channels.get('604372242763350057').send(`${booster} пробустил сервер!`)
-   booster.addRole(booster.guild.roles.find(a => a.name === '『 Nitro Booster 』'))
-})
 
 
 //discord invites
@@ -80,17 +69,9 @@ client.on('message', (message) => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-   message.channel.send("**Чтобы посмотреть список комманд используйте:  ``/help``**");
+   message.channel.send("**Usage:  ``/help``**");
   }
 }); 
-
-
-//moderator mention
-client.on('message', message => {
-  if (message.content === '911') {
-   message.channel.send("<@" + message.author.id + ">" + " вызывает " + "<@&618128028748349450>");
-  }
-});
 
 
 //commands
@@ -107,17 +88,15 @@ client.on("message", async message => {
       .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
       .setDescription('Список всех доступных комманд бота:')
       .setColor("#8b00ff")
-      .addField("Информация о сервере", "/server")
-      .addField("Аватар учасника", "/avatar [учасник]")
-      .addField("Модераторы сервера", "/moderators")
-      .addField("Иконка сервера", "/icon")
-      .addField("Выгнать", "/kick [учасник] [причина]")
-      .addField("Заблокировать", "/ban [учасник] [причина]")
-      .addField("Повторить", "/say [сообщение]")
-      .addField("Повторить с embed", "/embed [сообщение]")
-      .addField("Случайное число", "/ramdom")
-      .addField("Бесплатная роль", "/free")
-      .addField("Пинг", "/ping")
+      .addField("Server info", "/server")
+      .addField("Server icon", "/icon")
+      .addField("Avatar", "/avatar [member]")
+      .addField("Kick", "/kick [member] [reason]")
+      .addField("Ban", "/ban [member] [reason]")
+      .addField("Say", "/say [message]")
+      .addField("Say embed", "/embed [message]")
+      .addField("Random number", "/ramdom")
+      .addField("Ping", "/ping")
       .setTimestamp()
     return message.channel.send(help);
   } 
@@ -128,13 +107,12 @@ client.on("message", async message => {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#8b00ff")
-      .addField("Название", message.guild.name)
-      .addField("Владелец", message.guild.owner.user.tag)
-      .addField("Регион", message.guild.region)
-      .addField("Уровень проверки", message.guild.verificationLevel)
-      .addField("Участников", message.guild.members.size)
-      .addField("Каналов", message.guild.channels.size)
-      .addField("Ролей", message.guild.roles.size)
+      .addField("Name", message.guild.name)
+      .addField("Owner", message.guild.owner.user.tag)
+      .addField("Region", message.guild.region)
+      .addField("Members", message.guild.members.size)
+      .addField("Channels", message.guild.channels.size)
+      .addField("Roles", message.guild.roles.size)
       .setThumbnail(message.guild.iconURL)
       .setTimestamp()
     return message.channel.send(server);
@@ -168,7 +146,7 @@ client.on("message", async message => {
    var giverole = message.guild.roles.find(role => role.name === freerole[randomrole]); 
    message.member.addRole(giverole);
    message.delete().catch(O_o=>{});
-   message.channel.send("**Вы получили роль** ``" + freerole[randomrole] + "`` **✓**").then(function(message) {
+   message.channel.send("**You get role** ``" + freerole[randomrole] + "`` **✓**").then(function(message) {
     message.delete(3000);
    });
    }
@@ -185,7 +163,7 @@ client.on("message", async message => {
   //say command
     if(command === "say") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
-    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
+    return message.channel.send("You do not have permission to use this command!").catch(console.error);
     }
       
     const sayMessage = args.join(" ");
@@ -197,7 +175,7 @@ client.on("message", async message => {
   //embed command
     if(command === "embed") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
-    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
+    return message.channel.send("You do not have permission to use this command!").catch(console.error);
     }
     const embedMessage = args.join(" ");  
     const embed = new RichEmbed()  
