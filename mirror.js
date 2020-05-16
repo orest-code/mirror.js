@@ -36,9 +36,9 @@ client.on("ready", () => {
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
   let membertag = member.user.tag;
-  const embed = new RichEmbed()  
+  let joinmsg = new Discord.RichEmbed()
       .setColor("#00FFFF")
-      .setTitle(membertag + " Joined the server!");
+      .setTitle(membertag + " Joined the server!")
   if (guild.systemChannel) {
     guild.systemChannel.send(joinmsg);
   }
@@ -49,9 +49,9 @@ client.on("guildMemberAdd", (member) => {
 client.on("guildMemberRemove", (member) => {
   let guild = member.guild; 
   let membertag = member.user.tag;
-  const embed = new RichEmbed()  
+  let leftmsg = new Discord.RichEmbed()
       .setColor("#fe2e2e")
-      .setTitle(membertag + " Left the server!");
+      .setTitle(membertag + " Left the server!")
   if(guild.systemChannel){
     guild.systemChannel.send(leftmsg);
   }
