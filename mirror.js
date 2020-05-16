@@ -91,8 +91,6 @@ client.on("message", async message => {
       .addField("Server info", "/server")
       .addField("Server icon", "/icon")
       .addField("Avatar", "/avatar [member]")
-      .addField("Kick", "/kick [member] [reason]")
-      .addField("Ban", "/ban [member] [reason]")
       .addField("Clear", "/clear [number]")
       .addField("Say", "/say [message]")
       .addField("Say embed", "/embed [message]")
@@ -213,48 +211,6 @@ client.on("message", async message => {
     if(command === "ping") {
     const m = await message.channel.send("Ping?");
     m.edit(`**Pong! ${m.createdTimestamp - message.createdTimestamp}ms**`);
-  } 
-
-  
-  //kick command
-    if(command === "kick") {
-    if(!message.member.hasPermission("KICK_MEMBERS")){
-    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
-    }
-    
-    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-    if(!member)
-      return message.channel.send("Укажите пользователя которого хотите выгнать");
-    if(!member.kickable) 
-      return message.channel.send("Я не могу выгнать этого пользователя!");
-    
-    let reason = args.slice(1).join(' ');
-    if(!reason) reason = "Без причины";
-    
-    await member.kick(reason)
-      .catch(error => message.channel.send(`Извините ${message.author} я не могу вызнать из-за: ${error}`));
-    message.channel.send(`${member.user.tag} был выгнан <@${message.author.id}> по причине: ${reason}`);
-  }
-  
-  
-  //ban command
-    if(command === "ban") {
-    if(!message.member.hasPermission("BAN_MEMBERS")){
-    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
-    }
-    
-    let member = message.mentions.members.first();
-    if(!member)
-      return message.channel.send("Укажите пользователя которого хотите заблокировать!");
-    if(!member.bannable) 
-      return message.channel.send("Я не могу заблокировать этого пользователя!");
-
-    let reason = args.slice(1).join(' ');
-    if(!reason) reason = "Без причины";
-    
-    await member.ban(reason)
-      .catch(error => message.channel.send(`Извините ${message.author} я не могу заблокировать из-за: ${error}`));
-    message.channel.send(`${member.user.tag} был заблокирован <@${message.author.id}> по причине: ${reason}`);
   }
   
 
