@@ -34,20 +34,26 @@ client.on("ready", () => {
 
 //welcome message
 client.on("guildMemberAdd", (member) => {
+  let joinmsg = new Discord.RichEmbed()
   let guild = member.guild;
   let membertag = member.user.tag;
+      .setColor("#00FFFF")
+      .setDescription(membertag + " Joined the server!");
   if (guild.systemChannel) {
-    guild.systemChannel.send(membertag + " joined the server!");
+    guild.systemChannel.send(joinmsg);
   }
 });
 
 
 //leave message
 client.on("guildMemberRemove", (member) => {
+  let leftmsg = new Discord.RichEmbed()
   let guild = member.guild; 
   let membertag = member.user.tag;
+      .setColor("#FE2E2E");
+      .setDescription(membertag + " Left the server!");
   if(guild.systemChannel){
-    guild.systemChannel.send(membertag + " Left the server!");
+    guild.systemChannel.send(leftmsg);
   }
 });
 
