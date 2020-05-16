@@ -34,11 +34,11 @@ client.on("ready", () => {
 
 //welcome message
 client.on("guildMemberAdd", (member) => {
-  let joinmsg = new Discord.RichEmbed()
   let guild = member.guild;
   let membertag = member.user.tag;
+  const embed = new RichEmbed()  
       .setColor("#00FFFF")
-      .setDescription(membertag + " Joined the server!");
+      .setTitle(membertag + " Joined the server!");
   if (guild.systemChannel) {
     guild.systemChannel.send(joinmsg);
   }
@@ -47,11 +47,11 @@ client.on("guildMemberAdd", (member) => {
 
 //leave message
 client.on("guildMemberRemove", (member) => {
-  let leftmsg = new Discord.RichEmbed()
   let guild = member.guild; 
   let membertag = member.user.tag;
+  const embed = new RichEmbed()  
       .setColor("#fe2e2e");
-      .setDescription(membertag + " Left the server!");
+      .setTitle(membertag + " Left the server!");
   if(guild.systemChannel){
     guild.systemChannel.send(leftmsg);
   }
