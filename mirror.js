@@ -47,7 +47,7 @@ client.on("guildMemberRemove", (member) => {
   let guild = member.guild; 
   let membertag = member.user.tag;
   if(guild.systemChannel){
-    guild.systemChannel.send(membertag + " Left the server!);
+    guild.systemChannel.send(membertag + " Left the server!");
   }
 });
 
