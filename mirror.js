@@ -93,7 +93,7 @@ client.on("message", async message => {
       .addField("Avatar", "/avatar [member]")
       .addField("Kick", "/kick [member] [reason]")
       .addField("Ban", "/ban [member] [reason]")
-      .asdField("Clear", "/clear [number]"
+      .asdField("Clear", "/clear [number]")
       .addField("Say", "/say [message]")
       .addField("Say embed", "/embed [message]")
       .addField("Random number", "/ramdom")
