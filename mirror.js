@@ -139,16 +139,6 @@ client.on("message", async message => {
 }
 
 
-  //moderators list
-   if (command === "moderators") {
-   const mods = new Discord.RichEmbed()
-          .setColor("#8b00ff")
-          .setTitle('Список модераторов сервера:')
-          .setDescription(message.guild.roles.get('618128028748349450').members.map(m => m.user.tag).join('\n'));
-   message.channel.send(mods);
-}
-
-
   //random number command
     if(command === "random") {
     const lol = args.join(" ");
