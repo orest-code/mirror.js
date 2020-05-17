@@ -61,7 +61,7 @@ client.on("guildMemberRemove", (member) => {
 //discord invites
 client.on('message', (message) => { 
   if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link 
-    const arrayOfUsersIds = ['595030276804050945', '472320129514864651'];
+    const arrayOfUsersIds = ['595030276804050945', '472320129514864651', '632570913858125824'];
 
     for (let i = 0; i < arrayOfUsersIds.length; i++) {
     if (message.author.id === arrayOfUsersIds[i]) return;
