@@ -240,5 +240,6 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`))
     message.channel.send("**You cleared " + deleteCount + " messages**");
+    message.delete(5000);
   }
 });
