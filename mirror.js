@@ -107,6 +107,11 @@ client.on("message", async message => {
   } 
 
 
+ //mirror
+   if(command === "mirror") {
+    message.channel.send("**MIRROR » https://discord.gg/mVygkhv**");
+  }
+
   //server info
     if(command === "server") {
     let server = new Discord.RichEmbed()
