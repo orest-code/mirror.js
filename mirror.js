@@ -239,7 +239,8 @@ client.on("message", async message => {
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`))
-    message.channel.send("**You cleared " + deleteCount + " messages**");
-    message.delete(5000);
+    message.channel.send("**You cleared " + deleteCount + " messages**").then(function(message) {
+     message.delete(3000);
+   });
   }
 });
