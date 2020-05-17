@@ -228,7 +228,7 @@ client.on("message", async message => {
   //clear command
     if(command === "clear") {
     if(!message.member.hasPermission("MANAGE_MESSAGES")){
-    return message.channel.send("У вас нет разрешения на использование этой комманды!").catch(console.error);
+    return message.channel.send("You do not have permission to use this command!").catch(console.error);
     }
       
     const deleteCount = parseInt(args[0], 10);
@@ -238,6 +238,7 @@ client.on("message", async message => {
     
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
-      .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`));
+      .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`))
+    message.channel.send("You cleared" + deleteCount + "messages");
   }
 });
