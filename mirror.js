@@ -149,19 +149,6 @@ client.on("message", async message => {
 }
 
 
-//free role
-  if (command === "free") {
-   let freerole = ["『 Raspberries 』", "『 Watermelon 』", "『 Banana 』"];
-   let randomrole = Math.floor(Math.random() * freerole.length); 
-   var giverole = message.guild.roles.find(role => role.name === freerole[randomrole]); 
-   message.member.addRole(giverole);
-   message.delete().catch(O_o=>{});
-   message.channel.send("**You get role** ``" + freerole[randomrole] + "`` **✓**").then(function(message) {
-    message.delete(3000);
-   });
-   }
-
-
   //random number command
     if(command === "random") {
     const lol = args.join(" ");
