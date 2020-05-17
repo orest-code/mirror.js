@@ -80,6 +80,15 @@ client.on('message', message => {
 }); 
 
 
+client.on('message', message => {
+     const yuotube = args.join(" ");
+     if (message.content === youtube) {
+     message.delete().catch(O_o => {});
+     client.channel.get('521252337449172992').send(youtube)
+     }
+});
+
+
 //commands
 client.on("message", async message => {  
   if(message.author.bot) return; 
