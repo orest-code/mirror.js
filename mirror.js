@@ -91,7 +91,7 @@ client.on("message", async message => {
   //help command
     if(command === "help") {
     let help = new Discord.RichEmbed()
-      .setAuthor('MIRROR', 'https://cdn.discordapp.com/avatars/632570913858125824/1aa2c052174d4f332855a9440c994bc2.png', 'https://discord.gg/Rnb9SSU')
+      .setAuthor(message.guild.name, message.guild.iconURL)
       .setDescription('Command list:')
       .setColor("#00FFFF")
       .addField("Server info", "/server")
