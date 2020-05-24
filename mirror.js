@@ -72,6 +72,19 @@ client.on('message', (message) => {
 });
 
 
+//mcpe logs
+client.on('message', message => {
+   if (message.content === 'lwmsg') {
+        const lwmessage = args.join(" ");
+        const embed = new RichEmbed()
+         .setColor("#00FFFF")
+         .setTitle(lwmessage)
+        message.delete().catch(O_o => {});
+        message.channel.send(embed)
+   }
+  });
+
+
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
