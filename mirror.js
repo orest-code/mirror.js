@@ -131,12 +131,12 @@ client.on("message", async message => {
 
  //rules
    if(command === "rules") {
-    message.channel.send("**Русские правила:** ``/rules-ru``\n**English rules:** ``/rules-en``");
+    message.channel.send("**Русские правила:** ``/rulesru``\n**English rules:** ``/rulesen``");
   }
 
 
   //server rules ru
-    if(command === "rules-ru") {
+    if(command === "rulesru") {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setDescription("**Правила сервера RU:**\n1. Запрещено оскорблять участников сервера.\n2. Запрещено спам, флуд в чате.\n3. Запрещено пиар других каналов, серверов.\n4. Запрещено материться в чате.\n5. Запрещено кричать, дуть в микрофон.\n6. Запрещено скидывать в текстовые каналы картинки с порнографией.\n7. Запрещено ставить оскорбительные, неадекватные ники.\n8. Запрещено выдавать себя за другого человека.\n9. Запрещено выдавать себя за администрацию.\n10. Запрещено оскорбительные родных.\n\n**Правила для Администрации:**\n1. Не злоупотреблять своими возможностями.\n2. Ведите себя адекватно.\n3. Помогайте участникам сервера.\n4. Не нарушайте правила сервера.")
@@ -146,7 +146,7 @@ client.on("message", async message => {
 
 
   //server rules en
-  if (command === "rules-en") {
+  if (command === "rulesen") {
    let rulesen = new Discord.RichEmbed()
     .setAuthor(message.guild.name, message.guild.iconURL)
     .setDescription("**Server rules EN:**\n1. Forbidden to insult server participants.\n2. Forbidden spam in chat.\n3. Forbidden to advertise other servers, channels.\n4. Forbidden to swear in chat.\n5. Forbidden to scream, blow into the microphone.\n6. Forbidden to pictures with pornography into text channels.\n7. Forbidden to put abusive, incorrect nicknames.\n8. Forbidden to impersonate another person.\n9. Forbidden to impersonate administration.\n10. Forbidden to insult relatives.\n\n**Rules for Administration:**\n1. Do not abuse your abilities.\n2. Behave appropriately.\n3. You must help server members.")
