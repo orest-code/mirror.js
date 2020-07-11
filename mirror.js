@@ -23,6 +23,25 @@ client.on("ready", () => {
 });
 
 
+//members count
+let countChannel = {
+ member: "731554363859927131",
+ serverID: "714070759915651083"
+}
+
+client.on("guildMemberAdd", member => {
+ if (member.guild.id !== countChannel.serverID) return;
+
+ client.channels.cache.get(countChannel.member).setName(`Members: ${member.guild.members.cache.filter(m => !m.user.bot).size}`);
+});
+
+client.on("guildMemberRemove", member => {
+ if (member.guild.id !== countChannel.serverID) return;
+
+ client.channels.cache.get(countChannel.member).setName(`Members: ${member.guild.members.cache.filter(m => !m.user.bot).size}`);
+});
+
+
 //welcome message
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
