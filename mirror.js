@@ -7,6 +7,9 @@ const fs = require('fs');
 
 client.login(process.env.MIRROR);
 
+client.on("ready", () => {
+ console.log("Bot: MIRROR " + `${client.users.size}` + " users, in " + `${client.channels.size}` + " channels of " + `${client.guilds.size}` + " guilds.");
+
   //bot status
   client.user.setStatus("online");
   client.user.setPresence({
