@@ -9,11 +9,7 @@ client.login(process.env.MIRROR);
 
 
 client.on('ready', () => {
- let myGuild = client.guilds.get('714070759915651083');
- let memberCount = myGuild.memberCount;
- console.log(memberCount);
- let memberCountChannel = myGuild.channel.get('731554363859927131');
- memberCountChannel.setName('Members: ' + memberCount);
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
   //bot status
