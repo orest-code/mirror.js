@@ -8,16 +8,15 @@ const fs = require('fs');
 client.login(process.env.MIRROR);
 
 
-client.on("ready", () => {
-  console.log(
-    "Bot: MIRROR " +
-      `${client.users.size}` +
-      " users, in " +
-      `${client.channels.size}` +
-      " channels of " +
-      `${client.guilds.size}` +
-      " guilds."
-  );
+client.on('ready', () => {
+ let mirrorid = client.guilds.get('714070759915651083');
+ let memberCount = mirrorid.memberCount;
+ console.log(memberCount);
+ let memberCountChannel = mirrorid.channel.get('731554363859927131');
+ memberCountChannel.setName('Members: ' + memberCount)
+ .then(result => console.log('result'))
+ .catch(error => console.log(error));
+});
 
   //bot status
   client.user.setStatus("online");
