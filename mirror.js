@@ -13,9 +13,7 @@ client.on('ready', () => {
  let memberCount = myGuild.memberCount;
  console.log(memberCount);
  let memberCountChannel = myGuild.channel.get('731554363859927131');
- memberCountChannel.setName('Members: ' + memberCount)
- .then(result => console.log(result))
- .catch(error => console.log(error));
+ memberCountChannel.setName('Members: ' + memberCount);
 });
 
   //bot status
