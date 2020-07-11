@@ -232,7 +232,7 @@ client.on("message", async message => {
   
   //ping command
     if(command === "ping") {
-    const m = await message.channel.send("Ping?");
+    const m = await message.channel.send("wait...");
     m.edit(`**Pong! ${m.createdTimestamp - message.createdTimestamp}ms**`);
   }
   
