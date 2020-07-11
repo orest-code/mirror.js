@@ -7,11 +7,6 @@ const fs = require('fs');
 
 client.login(process.env.MIRROR);
 
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
   //bot status
   client.user.setStatus("online");
   client.user.setPresence({
