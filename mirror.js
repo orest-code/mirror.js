@@ -65,7 +65,7 @@ client.on('message', (message) => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-   message.channel.send("**Usage:  ``/help``**");
+   message.channel.send("**Используйте:  ``/help``**");
   }
 }); 
 
@@ -97,22 +97,17 @@ client.on("message", async message => {
   } 
 
 
- //mirror
-   if(command === "mirror") {
-    message.channel.send("**MIRROR »** https://discord.gg/mVygkhv");
-  }
-
   //server info
-    if(command === "server") {
+    if(command === "сервер") {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#00FFFF")
-      .addField("Name", message.guild.name)
-      .addField("Owner", message.guild.owner.user.tag)
-      .addField("Region", message.guild.region)
-      .addField("Members", message.guild.members.size)
-      .addField("Channels", message.guild.channels.size)
-      .addField("Roles", message.guild.roles.size)
+      .addField("Название", message.guild.name)
+      .addField("Владелец", message.guild.owner.user.tag)
+      .addField("Регион", message.guild.region)
+      .addField("Участников", message.guild.members.size)
+      .addField("Каналов", message.guild.channels.size)
+      .addField("Ролей", message.guild.roles.size)
       .setThumbnail(message.guild.iconURL)
       .setTimestamp()
     return message.channel.send(server);
@@ -121,12 +116,12 @@ client.on("message", async message => {
 
  //rules
    if(command === "rules") {
-    message.channel.send("**Русские правила:** ``/rules-ru``\n**English rules:** ``/rules-en``");
+    message.channel.send("**Русские правила:** ``/правила``\n**English rules:** ``/rules``");
   }
 
 
   //server rules ru
-    if(command === "rules-ru") {
+    if(command === "правила") {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setDescription("**Правила сервера RU:**\n1. Запрещено оскорблять участников сервера.\n2. Запрещено спам, флуд в чате.\n3. Запрещено пиар других каналов, серверов.\n4. Запрещено материться в чате.\n5. Запрещено кричать, дуть в микрофон.\n6. Запрещено скидывать в текстовые каналы картинки с порнографией.\n7. Запрещено ставить оскорбительные, неадекватные ники.\n8. Запрещено выдавать себя за другого человека.\n9. Запрещено выдавать себя за администрацию.\n10. Запрещено оскорбительные родных.\n\n**Правила для Администрации:**\n1. Не злоупотреблять своими возможностями.\n2. Ведите себя адекватно.\n3. Помогайте участникам сервера.\n4. Не нарушайте правила сервера.")
@@ -136,7 +131,7 @@ client.on("message", async message => {
 
 
   //server rules en
-  if (command === "rules-en") {
+  if (command === "rules") {
    let rulesen = new Discord.RichEmbed()
     .setAuthor(message.guild.name, message.guild.iconURL)
     .setDescription("**Server rules EN:**\n1. Forbidden to insult server participants.\n2. Forbidden spam in chat.\n3. Forbidden to advertise other servers, channels.\n4. Forbidden to swear in chat.\n5. Forbidden to scream, blow into the microphone.\n6. Forbidden to pictures with pornography into text channels.\n7. Forbidden to put abusive, incorrect nicknames.\n8. Forbidden to impersonate another person.\n9. Forbidden to impersonate administration.\n10. Forbidden to insult relatives.\n\n**Rules for Administration:**\n1. Do not abuse your abilities.\n2. Behave appropriately.\n3. You must help server members.")
@@ -166,7 +161,7 @@ client.on("message", async message => {
 
 
   //embed command
-    if(command === "embed") {
+    if(command === "скажи2") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
     return message.channel.send("You do not have permission to use this command!").catch(console.error);
     }
@@ -180,7 +175,7 @@ client.on("message", async message => {
 
 
  //server icon
-   if(command === "icon") {
+   if(command === "иконка") {
     const embed = new Discord.RichEmbed()
                    .setImage(message.guild.iconURL)
                    .setColor("#00FFFF")
@@ -189,7 +184,7 @@ client.on("message", async message => {
 
 
   //avatar command
-    if(command === "avatar") {
+    if(command === "аватарка") {
        let user = message.mentions.users.first();
     if(!user) user = message.author;
     let color = message.member.displayHexColor;
@@ -202,9 +197,9 @@ client.on("message", async message => {
 
   
   //ping command
-    if(command === "ping") {
+    if(command === "пинг") {
     const m = await message.channel.send("wait...");
-    m.edit(`**Pong! ${m.createdTimestamp - message.createdTimestamp}ms**`);
+    m.edit(`**Ваш пинг: ${m.createdTimestamp - message.createdTimestamp}ms**`);
   }
   
 
