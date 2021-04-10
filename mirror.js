@@ -115,7 +115,7 @@ client.on("message", async message => {
 
 
  //rules
-   if(command === "rules") {
+   if(command === "rules-info") {
     message.channel.send("**Русские правила:** ``/правила``\n**English rules:** ``/rules``");
   }
 
