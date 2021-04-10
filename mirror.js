@@ -146,7 +146,7 @@ client.on("message", async message => {
 
 
   //random number command
-    if(command === "random") {
+    if(command === "рандом") {
     const lol = args.join(" ");
     var random = Math.floor(Math.random() *100)+1;
     message.channel.send(random + " " + lol);
@@ -154,9 +154,9 @@ client.on("message", async message => {
 
 
   //say command
-    if(command === "say") {
+    if(command === "скажи") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
-    return message.channel.send("You do not have permission to use this command!").catch(console.error);
+    return message.channel.send("У вас не достаточно прав для использования этой комманды!").catch(console.error);
     }
       
     const sayMessage = args.join(" ");
@@ -209,9 +209,9 @@ client.on("message", async message => {
   
 
   //clear command
-    if(command === "clear") {
+    if(command === "очистить") {
     if(!message.member.hasPermission("MANAGE_MESSAGES")){
-    return message.channel.send("You do not have permission to use this command!").catch(console.error);
+    return message.channel.send("У вас не достаточно прав для использования этой комманды!").catch(console.error);
     }
       
     const deleteCount = parseInt(args[0], 10);
@@ -222,7 +222,7 @@ client.on("message", async message => {
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.channel.send(`Не удалось удалить сообщения из-за: ${error}`))
-    message.channel.send("**You cleared " + deleteCount + " messages**").then(function(message) {
+    message.channel.send("**Вы очистили " + deleteCount + " сообщений**").then(function(message) {
      message.delete(5000);
    });
   }
