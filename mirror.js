@@ -65,7 +65,7 @@ client.on('message', (message) => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-   message.channel.send("**Используйте:  ``/help``**");
+   message.channel.send("**Используйте:  ``/комманды``**");
   }
 }); 
 
@@ -79,7 +79,7 @@ client.on("message", async message => {
 
 
   //help command
-    if(command === "help") {
+    if(command === "комманды") {
     let help = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setDescription('Command list:')
