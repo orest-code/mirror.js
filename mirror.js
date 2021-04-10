@@ -82,7 +82,7 @@ client.on("message", async message => {
     if(command === "помощь") {
     let help = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
-      .setDescription('Command list:')
+      .setDescription('Команды сервера:')
       .setColor("#00FFFF")
       .addField("Информация о сервере", "/сервер")
       .addField("Посмотреть аватарку", "/аватарка [учасник]")
