@@ -15,7 +15,7 @@ client.on("ready", () => {
   client.user.setPresence({
     game: {
       name: "/help",
-      type: "WATCHING",
+      type: "STREAMING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
     }
@@ -65,7 +65,7 @@ client.on('message', (message) => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-   message.channel.send("**Используйте:  ``/комманды``**");
+   message.channel.send("**Используйте:  ``/помощь``**");
   }
 }); 
 
@@ -79,7 +79,7 @@ client.on("message", async message => {
 
 
   //help command
-    if(command === "комманды") {
+    if(command === "помощь") {
     let help = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setDescription('Command list:')
@@ -151,7 +151,7 @@ client.on("message", async message => {
   //say command
     if(command === "скажи") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
-    return message.channel.send("У вас не достаточно прав для использования этой комманды!").catch(console.error);
+    return message.channel.send("У вас не достаточно прав для использования этой команды!").catch(console.error);
     }
       
     const sayMessage = args.join(" ");
@@ -206,7 +206,7 @@ client.on("message", async message => {
   //clear command
     if(command === "очистить") {
     if(!message.member.hasPermission("MANAGE_MESSAGES")){
-    return message.channel.send("У вас не достаточно прав для использования этой комманды!").catch(console.error);
+    return message.channel.send("У вас не достаточно прав для использования этой команды!").catch(console.error);
     }
       
     const deleteCount = parseInt(args[0], 10);
