@@ -28,7 +28,7 @@ client.on("guildMemberAdd", (member) => {
   let membertag = member.user.tag;
   let joinmsg = new Discord.RichEmbed()
       .setColor("#00FFFF")
-      .setTitle(membertag + " Joined the server!")
+      .setTitle(membertag + " Присоеденился к серверу!")
   if (guild.systemChannel) {
     guild.systemChannel.send(joinmsg);
   }
@@ -41,7 +41,7 @@ client.on("guildMemberRemove", (member) => {
   let membertag = member.user.tag;
   let leftmsg = new Discord.RichEmbed()
       .setColor("#fe2e2e")
-      .setTitle(membertag + " Left the server!")
+      .setTitle(membertag + " Покинул сервер!")
   if(guild.systemChannel){
     guild.systemChannel.send(leftmsg);
   }
