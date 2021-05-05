@@ -47,6 +47,13 @@ client.on("guildMemberRemove", (member) => {
   }
 });
 
+const ladno = new Discord.MessageEmbed()
+	.setColor('#00FFFF')
+	.setAuthor('', '')
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
+	.setTimestamp();
+
+channel.send(ladno);
 
 //discord invites
 client.on('message', (message) => { 
