@@ -47,13 +47,6 @@ client.on("guildMemberRemove", (member) => {
   }
 });
 
-const ladno = new Discord.MessageEmbed()
-	.setColor('#00FFFF')
-	.setAuthor('', '')
-	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
-	.setTimestamp();
-
-channel.send(ladno);
 
 //discord invites
 client.on('message', (message) => { 
@@ -150,6 +143,15 @@ client.on("message", async message => {
     var random = Math.floor(Math.random() *1000)+1;
     message.channel.send(random + " " + lol);
   }
+
+  //пикчи
+    const ladno = new Discord.MessageEmbed()
+	.setColor('#00FFFF')
+	.setAuthor('${msg.author.username}', 'message.author.avatarURL')
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
+	.setTimestamp();
+
+    channel.send(ladno);
 
 
   //say command
