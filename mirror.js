@@ -151,7 +151,7 @@ client.on("message", async message => {
 	.setAuthor('message.author.username', 'message.author.avatarURL')
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
 	.setTimestamp();
-    message.channel.send() 
+    message.channel.send(ladno) 
   }
 
 
