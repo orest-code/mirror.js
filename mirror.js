@@ -145,13 +145,15 @@ client.on("message", async message => {
   }
 
   //пикчи
-    const ladno = new Discord.MessageEmbed()
+if(command === "ладно") {
+let ladno = new Discord.MessageEmbed()
 	.setColor('#00FFFF')
 	.setAuthor('${msg.author.username}', 'message.author.avatarURL')
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
 	.setTimestamp();
 
-    channel.send(ladno);
+return message.channel.send(ladno);
+}
 
 
   //say command
