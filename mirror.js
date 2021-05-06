@@ -148,7 +148,7 @@ client.on("message", async message => {
   //пикчи
     if(command === "пикчи") {
     let pikchi = new Discord.RichEmbed()
-      .setAuthor(message.guild.name, message.guild.iconURL)
+      .setAuthor(message.author.username, message.author.avatarURL)
       .setDescription('Пикчи:\n1. /ладно\n2. /прохладно\n3. /да\n4. /8лет\n5. /геней\n6. /беда\n7. /понимаю\n8. /повезло\n9. /не-повезло\n10. /уно')
       .setColor("#00FFFF")
       .setTimestamp()
@@ -166,6 +166,7 @@ client.on("message", async message => {
 
     if(command === "прохладно") {
     const prohladno = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/836658378561290311/839762075622178876/IMG_20210325_195054.jpg')
 	.setTimestamp()
@@ -174,6 +175,7 @@ client.on("message", async message => {
 
     if(command === "да") {
     const da = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637875901333534/Da.jpg')
 	.setTimestamp()
@@ -182,6 +184,7 @@ client.on("message", async message => {
 
     if(command === "8лет") {
     const pizda = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638059150606407/8_let.jpg')
 	.setTimestamp()
@@ -190,6 +193,7 @@ client.on("message", async message => {
 
     if(command === "геней") {
     const geney = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638107204878336/Geniy.jpg')
 	.setTimestamp()
@@ -198,6 +202,7 @@ client.on("message", async message => {
 
     if(command === "беда") {
     const beda = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
 	.setTimestamp()
@@ -206,6 +211,7 @@ client.on("message", async message => {
 
     if(command === "понимаю") {
     const ponimayu = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639166161911829/Ponimayu.jpg')
 	.setTimestamp()
@@ -214,6 +220,7 @@ client.on("message", async message => {
 
     if(command === "повезло") {
     const povezlo = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639214047756349/Povezlo_povezlo.jpg')
 	.setTimestamp()
@@ -222,6 +229,7 @@ client.on("message", async message => {
 
     if(command === "не-повезло") {
     const nepovezlo = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639263524290560/Ne_povezlo_ne_povezlo.jpg')
 	.setTimestamp()
@@ -230,6 +238,7 @@ client.on("message", async message => {
 
     if(command === "уно") {
     const uno = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639700351614978/71538e2868582330c9e2f3afe9ea1123-1.jpg')
 	.setTimestamp()
