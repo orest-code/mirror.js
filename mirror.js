@@ -149,8 +149,8 @@ client.on("message", async message => {
     if(command === "пикчи") {
     let pikchi = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
-      .setDescription("Пикчи:\n1. /ладно\n2. /прохладно\n3. /да\n4. /8лет\n5. /геней\n6. /беда\n7. /понимаю\n8
-		       /повезло\n9. /не-повезло\n10. /уно")
+      .setDescription('Пикчи:\n1. /ладно\n2. /прохладно\n3. /да\n4. /8лет\n5. /геней\n6. /беда\n7. /понимаю\n8
+		       /повезло\n9. /не-повезло\n10. /уно')
       .setColor("#00FFFF")
       .setTimestamp()
     return message.channel.send(pikchi);
