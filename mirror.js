@@ -153,6 +153,38 @@ client.on("message", async message => {
     message.channel.send(ladno) 
   }
 
+    if(command === "да") {
+    const da = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637875901333534/Da.jpg')
+	.setTimestamp()
+    message.channel.send(da) 
+  }
+
+    if(command === "ладно") {
+    const ladno = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
+	.setTimestamp()
+    message.channel.send(ladno) 
+  }
+
+    if(command === "ладно") {
+    const ladno = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
+	.setTimestamp()
+    message.channel.send(ladno) 
+  }
+
+    if(command === "ладно") {
+    const ladno = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
+	.setTimestamp()
+    message.channel.send(ladno) 
+  }
+
 
   //say command
     if(command === "скажи") {
