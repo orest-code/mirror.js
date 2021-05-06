@@ -196,7 +196,7 @@ client.on("message", async message => {
     if(command === "повезло") {
     const povezlo = new RichEmbed()  
        .setColor("#00FFFF")
-	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639214047756349/Povezlo_povezlo.jpg')
 	.setTimestamp()
     message.channel.send(povezlo) 
   }
@@ -204,7 +204,7 @@ client.on("message", async message => {
     if(command === "не-повезло") {
     const nepovezlo = new RichEmbed()  
        .setColor("#00FFFF")
-	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639263524290560/Ne_povezlo_ne_povezlo.jpg')
 	.setTimestamp()
     message.channel.send(nepovezlo) 
   }
@@ -212,7 +212,7 @@ client.on("message", async message => {
     if(command === "уно") {
     const uno = new RichEmbed()  
        .setColor("#00FFFF")
-	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639700351614978/71538e2868582330c9e2f3afe9ea1123-1.jpg')
 	.setTimestamp()
     message.channel.send(uno) 
   }
