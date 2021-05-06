@@ -181,11 +181,11 @@ client.on("message", async message => {
   }
 
     if(command === "8лет") {
-    const 8let = new RichEmbed()  
+    const pizda = new RichEmbed()  
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638059150606407/8_let.jpg')
 	.setTimestamp()
-    message.channel.send(8let) 
+    message.channel.send(pizda) 
   }
 
     if(command === "геней") {
