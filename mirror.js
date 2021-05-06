@@ -157,6 +157,7 @@ client.on("message", async message => {
 
     if(command === "ладно") {
     const ladno = new RichEmbed()  
+       .setAuthor(message.author.username, message.author.avatarURL)
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
 	.setTimestamp()
