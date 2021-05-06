@@ -171,6 +171,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/836658378561290311/839762075622178876/IMG_20210325_195054.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(prohladno) 
   }
 
@@ -180,6 +181,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637875901333534/Da.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(da) 
   }
 
@@ -189,6 +191,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638059150606407/8_let.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(pizda) 
   }
 
@@ -198,6 +201,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638107204878336/Geniy.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(geney) 
   }
 
@@ -207,6 +211,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(beda) 
   }
 
@@ -216,6 +221,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639166161911829/Ponimayu.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(ponimayu) 
   }
 
@@ -225,6 +231,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639214047756349/Povezlo_povezlo.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(povezlo) 
   }
 
@@ -234,6 +241,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639263524290560/Ne_povezlo_ne_povezlo.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(nepovezlo) 
   }
 
@@ -243,6 +251,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639700351614978/71538e2868582330c9e2f3afe9ea1123-1.jpg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(uno) 
   }
 
