@@ -144,7 +144,26 @@ client.on("message", async message => {
     message.channel.send(random + " " + lol);
   }
 
+
   //пикчи
+    if(command === "пикчи") {
+    let pikchi = new Discord.RichEmbed()
+      .setAuthor(message.guild.name, message.guild.iconURL)
+      .setDescription('Пикчи:')
+      .setColor("#00FFFF")
+      .addField("/ладно")
+      .addField("/да")
+      .addField("/8лет")
+      .addField("/геней")
+      .addField("/беда")
+      .addField("/понимаю")
+      .addField("/повезло")
+      .addField("/не-повезло")
+      .addField("/уно")
+      .setTimestamp()
+    return message.channel.send(pikchi);
+  }
+
     if(command === "ладно") {
     const ladno = new RichEmbed()  
        .setColor("#00FFFF")
