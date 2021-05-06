@@ -186,35 +186,35 @@ client.on("message", async message => {
   }
 
     if(command === "понимаю") {
-    const beda = new RichEmbed()  
+    const ponimayu = new RichEmbed()  
        .setColor("#00FFFF")
-	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839639166161911829/Ponimayu.jpg')
 	.setTimestamp()
-    message.channel.send(beda) 
+    message.channel.send(ponimayu) 
   }
 
     if(command === "повезло") {
-    const beda = new RichEmbed()  
+    const povezlo = new RichEmbed()  
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
 	.setTimestamp()
-    message.channel.send(beda) 
+    message.channel.send(povezlo) 
   }
 
     if(command === "не-повезло") {
-    const beda = new RichEmbed()  
+    const nepovezlo = new RichEmbed()  
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
 	.setTimestamp()
-    message.channel.send(beda) 
+    message.channel.send(nepovezlo) 
   }
 
     if(command === "уно") {
-    const beda = new RichEmbed()  
+    const uno = new RichEmbed()  
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
 	.setTimestamp()
-    message.channel.send(beda) 
+    message.channel.send(uno) 
   }
 
 
