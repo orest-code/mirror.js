@@ -161,6 +161,7 @@ client.on("message", async message => {
        .setColor("#00FFFF")
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
 	.setTimestamp()
+    message.delete().catch(O_o=>{});
     message.channel.send(ladno) 
   }
 
