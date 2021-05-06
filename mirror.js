@@ -161,12 +161,12 @@ client.on("message", async message => {
     message.channel.send(da) 
   }
 
-    if(command === "ладно") {
-    const ladno = new RichEmbed()  
+    if(command === "8лет") {
+    const 8let = new RichEmbed()  
        .setColor("#00FFFF")
-	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638059150606407/8_let.jpg')
 	.setTimestamp()
-    message.channel.send(ladno) 
+    message.channel.send(8let) 
   }
 
     if(command === "ладно") {
