@@ -152,7 +152,7 @@ client.on("message", async message => {
       .setDescription('Пикчи:')
       .setColor("#00FFFF")
       .addField("/ладно", "----------")
-      .addField("/прохладно", "")
+      .addField("/прохладно", "----------")
       .addField("/да", "----------")
       .addField("/8лет", "----------")
       .addField("/геней", "----------")
