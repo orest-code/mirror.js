@@ -185,6 +185,38 @@ client.on("message", async message => {
     message.channel.send(beda) 
   }
 
+    if(command === "понимаю") {
+    const beda = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setTimestamp()
+    message.channel.send(beda) 
+  }
+
+    if(command === "повезло") {
+    const beda = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setTimestamp()
+    message.channel.send(beda) 
+  }
+
+    if(command === "не-повезло") {
+    const beda = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setTimestamp()
+    message.channel.send(beda) 
+  }
+
+    if(command === "уно") {
+    const beda = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839638337786740756/Beda_s_bashkoy.jpg')
+	.setTimestamp()
+    message.channel.send(beda) 
+  }
+
 
   //say command
     if(command === "скажи") {
