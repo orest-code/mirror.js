@@ -152,6 +152,7 @@ client.on("message", async message => {
       .setDescription('Пикчи:')
       .setColor("#00FFFF")
       .addField("/ладно", "----------")
+      .addField("/прохладно", "")
       .addField("/да", "----------")
       .addField("/8лет", "----------")
       .addField("/геней", "----------")
@@ -170,6 +171,14 @@ client.on("message", async message => {
 	.setImage('https://cdn.discordapp.com/attachments/790973672159707159/839637844342734868/Ladno.jpeg')
 	.setTimestamp()
     message.channel.send(ladno) 
+  }
+
+    if(command === "прохладно") {
+    const prohladno = new RichEmbed()  
+       .setColor("#00FFFF")
+	.setImage('https://cdn.discordapp.com/attachments/836658378561290311/839762075622178876/IMG_20210325_195054.jpg')
+	.setTimestamp()
+    message.channel.send(prohladno) 
   }
 
     if(command === "да") {
