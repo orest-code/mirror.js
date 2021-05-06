@@ -151,7 +151,15 @@ client.on("message", async message => {
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setDescription('Пикчи:')
       .setColor("#00FFFF")
-      .addField("/ладно", "/да", "/8лет", "/геней", "/беда", "/понимаю", "/повезло", "не-повезло", "/уно")
+      .addField("/ладно", "----------")
+      .addField("/да", "----------")
+      .addField("/8лет", "----------")
+      .addField("/геней", "----------")
+      .addField("/беда", "----------")
+      .addField("/понимаю", "----------")
+      .addField("/повезло", "----------")
+      .addField("/не-повезло", "----------")
+      .addField("/уно", "----------")
       .setTimestamp()
     return message.channel.send(pikchi);
   };
