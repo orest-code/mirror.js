@@ -14,7 +14,7 @@ client.on("ready", () => {
   client.user.setStatus("online");
   client.user.setPresence({
     game: {
-      name: "шизу банана",
+      name: "за хуенёй которую пишут в чате",
       type: "WATCHING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
