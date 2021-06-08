@@ -11,10 +11,10 @@ client.on("ready", () => {
  console.log("Bot: MIRROR " + `${client.users.size}` + " users, in " + `${client.channels.size}` + " channels of " + `${client.guilds.size}` + " guilds.");
 
   //bot status
-  client.user.setStatus("online");
+  client.user.setStatus("idle");
   client.user.setPresence({
     game: {
-      name: "за шизой Banan11223#0706",
+      name: "за шизой Banan11223",
       type: "WATCHING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
