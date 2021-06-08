@@ -11,7 +11,7 @@ client.on("ready", () => {
  console.log("Bot: MIRROR " + `${client.users.size}` + " users, in " + `${client.channels.size}` + " channels of " + `${client.guilds.size}` + " guilds.");
 
   //bot status
-  client.user.setStatus("idle");
+  client.user.setStatus("dnd");
   client.user.setPresence({
     game: {
       name: "за шизой Banan11223",
