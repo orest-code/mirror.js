@@ -65,7 +65,7 @@ client.on('message', (message) => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-   message.channel.send("**Используй:  ``/help``**");
+   message.channel.send("**Используй:  /help**");
   }
 }); 
 
