@@ -14,7 +14,7 @@ client.on("ready", () => {
   client.user.setStatus("dnd");
   client.user.setPresence({
     game: {
-      name: "Используй: /помощь",
+      name: "Use: /help",
       type: "STREAMING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
@@ -65,7 +65,7 @@ client.on('message', (message) => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-   message.channel.send("**Используйте:  ``/помощь``**");
+   message.channel.send("**Use:  ``/help``**");
   }
 }); 
 
@@ -79,23 +79,23 @@ client.on("message", async message => {
 
 
   //help command
-    if(command === "помощь") {
+    if(command === "help") {
     let help = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setDescription('Команды сервера:')
       .setColor("#00FFFF")
-      .addField("Информация о сервере", "/сервер")
-      .addField("Посмотреть аватарку", "/аватарка [учасник]")
-      .addField("Очистить чат", "/очистить [число]")
-      .addField("Случайное число", "/рандом")
-      .addField("Узнать свой пинг пинг", "/пинг")
+      .addField("Информация о сервере", "/server")
+      .addField("Посмотреть аватарку", "/avatar [учасник]")
+      .addField("Очистить чат", "/clear [число]")
+      .addField("Случайное число", "/random")
+      .addField("Узнать свой пинг пинг", "/ping")
       .setTimestamp()
     return message.channel.send(help);
   } 
 
 
   //server info
-    if(command === "сервер") {
+    if(command === "server") {
     let server = new Discord.RichEmbed()
       .setAuthor(message.guild.name, message.guild.iconURL)
       .setColor("#00FFFF")
@@ -138,7 +138,7 @@ client.on("message", async message => {
 
 
   //random number command
-    if(command === "рандом") {
+    if(command === "random") {
     const lol = args.join(" ");
     var random = Math.floor(Math.random() *1000)+1;
     message.channel.send(random + " " + lol);
@@ -257,7 +257,7 @@ client.on("message", async message => {
 
 
   //say command
-    if(command === "скажи") {
+    if(command === "say") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
     return message.channel.send("У вас не достаточно прав для использования этой команды!").catch(console.error);
     }
@@ -269,7 +269,7 @@ client.on("message", async message => {
 
 
   //embed command
-    if(command === "скажи2") {
+    if(command === "embed") {
     if(!message.member.hasPermission("ADMINISTRATOR")){
     return message.channel.send("You do not have permission to use this command!").catch(console.error);
     }
@@ -283,7 +283,7 @@ client.on("message", async message => {
 
 
  //server icon
-   if(command === "иконка") {
+   if(command === "icon") {
     const embed = new Discord.RichEmbed()
                    .setImage(message.guild.iconURL)
                    .setColor("#00FFFF")
@@ -292,7 +292,7 @@ client.on("message", async message => {
 
 
   //avatar command
-    if(command === "аватарка") {
+    if(command === "avatar") {
        let user = message.mentions.users.first();
     if(!user) user = message.author;
     let color = message.member.displayHexColor;
@@ -305,14 +305,14 @@ client.on("message", async message => {
 
   
   //ping command
-    if(command === "пинг") {
+    if(command === "ping") {
     const m = await message.channel.send("wait...");
     m.edit(`**Ваш пинг: ${m.createdTimestamp - message.createdTimestamp}ms**`);
   }
   
 
   //clear command
-    if(command === "очистить") {
+    if(command === "clear") {
     if(!message.member.hasPermission("MANAGE_MESSAGES")){
     return message.channel.send("У вас не достаточно прав для использования этой команды!").catch(console.error);
     }
