@@ -14,7 +14,7 @@ client.on("ready", () => {
   client.user.setStatus("dnd");
   client.user.setPresence({
     game: {
-      name: "Use: /help",
+      name: "Используй: /help",
       type: "STREAMING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
@@ -65,7 +65,7 @@ client.on('message', (message) => {
 //bot mention
 client.on('message', message => {
   if (message.content === '<@632570913858125824>') {
-   message.channel.send("**Use:  ``/help``**");
+   message.channel.send("**Используй:  ``/help``**");
   }
 }); 
 
