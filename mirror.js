@@ -14,7 +14,7 @@ client.on("ready", () => {
   client.user.setStatus("dnd");
   client.user.setPresence({
     game: {
-      name: "Используй /помощь",
+      name: "Используй: /помощь",
       type: "STREAMING",
       url:
         "https://www.youtube.com/channel/UCjjsEnIg5cDkw35UCD35bUA?view_as=subscriber"
