@@ -76,6 +76,12 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+ if (message.content === "Жиза") {
+    message.delete().catch(O_o=>{});  
+  }
+});
+
 
 //commands
 client.on("message", async message => {  
