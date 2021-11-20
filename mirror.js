@@ -255,9 +255,10 @@ client.on("message", async message => {
     message.channel.send(uno) 
   }
 
-  //say command
+  //жиза command
     if(command === "жиза") {
-    message.delete().catch(O_o=>{});  
+    let delmsg = new Discord.RichEmbed()
+    message.delete().catch(O_o=>{});
   }
 
 
