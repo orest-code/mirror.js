@@ -255,6 +255,11 @@ client.on("message", async message => {
     message.channel.send(uno) 
   }
 
+  //say command
+    if(command === "жиза") {
+    message.delete().catch(O_o=>{});  
+  }
+
 
   //say command
     if(command === "say") {
